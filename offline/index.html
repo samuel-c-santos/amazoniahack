@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Roteamento offline — Paragominas (Desafio 3)</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #101418; font-family: system-ui, sans-serif; }
+  #map { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; }
+  #panel {
+    position: absolute; top: 12px; left: 12px; width: 300px;
+    background: rgba(20, 24, 28, 0.9); color: #e8eef2; border: 1px solid #2a323a;
+    border-radius: 8px; padding: 12px 14px; font-size: 13px; line-height: 1.45;
+    backdrop-filter: blur(4px); pointer-events: auto;
+  }
+  #panel h1 { font-size: 15px; margin: 0 0 6px; }
+  #panel .hint { color: #8fa3b0; font-size: 12px; }
+  #info { margin-top: 8px; border-top: 1px solid #2a323a; padding-top: 8px; display: none; }
+  #info .row { display: flex; justify-content: space-between; }
+  .legend { margin-top: 8px; border-top: 1px solid #2a323a; padding-top: 6px; }
+  .legend .it { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #b8c6cf; margin: 2px 0; }
+  .sw { width: 16px; height: 3px; border-radius: 2px; flex: 0 0 auto; }
+  button {
+    margin-top: 8px; background: #1f6feb; color: #fff; border: 0; border-radius: 6px;
+    padding: 6px 10px; font-size: 12px; cursor: pointer;
+  }
+  #status { color: #f0b429; font-size: 12px; min-height: 16px; }
+</style>
+</head>
+<body>
+<canvas id="map"></canvas>
+<div id="panel">
+  <h1>Roteamento offline — Paragominas</h1>
+  <div class="hint">Clique na <b>origem</b>, depois no <b>destino</b>. Arraste p/ mover, roda do mouse p/ zoom.</div>
+  <div id="status">Carregando grafo…</div>
+  <div id="info"></div>
+  <div class="legend" id="legend"></div>
+  <button id="clear">Limpar rota</button>
+</div>
+<script>
+'use strict';
+
+// ---------------------------------------------------------------------------
+// Parse do binário (mesmo formato de desafio3_grafo_schema.md)
+// ---------------------------------------------------------------------------
+async function loadGraph(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  const ab = await res.arrayBuffer();
+  const b = new Uint8Array(ab);
+  const view = new DataView(ab);
+
+  const magic = String.fromCharCode(b[0], b[1], b[2], b[3]);
+  if (magic !== 'AHG3') throw new Error('magic invalido: ' + magic);
+  const version = view.getUint32(4, true);
+  const N = view.getUint32(8, true);
+  const M = view.getUint32(12, true);
+  const metaLen = view.getUint32(16, true);
+  const meta = JSON.parse(new TextDecoder().decode(b.subarray(20, 20 + metaLen)));
+
+  let p = 20 + metaLen;
+  const lon = new Float64Array(N);
+  const lat = new Float64Array(N);
+  for (let i = 0; i < N; i++) { lon[i] = view.getFloat64(p, true); p += 8; }
+  for (let i = 0; i < N; i++) { lat[i] = view.getFloat64(p, true); p += 8; }
+  const offset = new Uint32Array(N + 1);
+  for (let i = 0; i <= N; i++) { offset[i] = view.getUint32(p, true); p += 4; }
+  const neighbor = new Uint32Array(M);
+  for (let i = 0; i < M; i++) { neighbor[i] = view.getUint32(p, true); p += 4; }
+  const weight = new Float32Array(M);
+  for (let i = 0; i < M; i++) { weight[i] = view.getFloat32(p, true); p += 4; }
+  const tier = new Uint8Array(M);
+  for (let i = 0; i < M; i++) { tier[i] = b[p++]; }
+
+  const multByCode = new Float64Array(5);
+  const nameByCode = [];
+  for (const [name, code] of Object.entries(meta.tier_codes)) {
+    multByCode[code] = meta.tier_multipliers[name];
+    nameByCode[code] = name;
+  }
+  return { version, N, M, meta, lon, lat, offset, neighbor, weight, tier, multByCode, nameByCode };
+}
+
+// ---------------------------------------------------------------------------
+// UTM 22S (WGS84) — para snap/distâncias em metros
+// ---------------------------------------------------------------------------
+const rad = d => (d * Math.PI) / 180;
+function toUTM(lonDeg, latDeg) {
+  const a = 6378137.0, e2 = 0.00669437999014, ep2 = e2 / (1 - e2), k0 = 0.9996;
+  const lon0 = -51;
+  const phi = rad(latDeg), lam = rad(lonDeg - lon0);
+  const N = a / Math.sqrt(1 - e2 * Math.sin(phi) * Math.sin(phi));
+  const T = Math.tan(phi) * Math.tan(phi);
+  const C = ep2 * Math.cos(phi) * Math.cos(phi);
+  const A = lam * Math.cos(phi);
+  const e4 = e2 * e2, e6 = e4 * e2;
+  const Mm = a * ((1 - e2 / 4 - 3 * e4 / 64 - 5 * e6 / 256) * phi
+    - (3 * e2 / 8 + 3 * e4 / 32 + 45 * e6 / 1024) * Math.sin(2 * phi)
+    + (15 * e4 / 256 + 45 * e6 / 1024) * Math.sin(4 * phi)
+    - (35 * e6 / 3072) * Math.sin(6 * phi));
+  const east = k0 * N * (A + (1 - T + C) * A ** 3 / 6 + (5 - 18 * T + T * T + 72 * C - 58 * ep2) * A ** 5 / 120) + 500000;
+  const north = k0 * (Mm + N * Math.tan(phi) * (A * A / 2 + (5 - T + 9 * C + 4 * C * C) * A ** 4 / 24
+    + (61 - 58 * T + T * T + 600 * C - 330 * ep2) * A ** 6 / 720)) + (latDeg < 0 ? 10000000 : 0);
+  return [east, north];
+}
+
+// ---------------------------------------------------------------------------
+// Índices auxiliares
+// ---------------------------------------------------------------------------
+function buildUtm(g) {
+  const east = new Float64Array(g.N), north = new Float64Array(g.N);
+  for (let i = 0; i < g.N; i++) { const [e, n] = toUTM(g.lon[i], g.lat[i]); east[i] = e; north[i] = n; }
+  return { east, north };
+}
+
+// arestas não-dirigidas (i<j) para renderizar, com ponto médio e tier
+function buildEdges(g) {
+  let cnt = 0;
+  for (let i = 0; i < g.N; i++) {
+    for (let k = g.offset[i]; k < g.offset[i + 1]; k++) if (g.neighbor[k] > i) cnt++;
+  }
+  const eu = new Uint32Array(cnt), ev = new Uint32Array(cnt), et = new Uint8Array(cnt);
+  const eml = new Float32Array(cnt), emt = new Float32Array(cnt);
+  let w = 0;
+  for (let i = 0; i < g.N; i++) {
+    for (let k = g.offset[i]; k < g.offset[i + 1]; k++) {
+      const j = g.neighbor[k];
+      if (j > i) {
+        eu[w] = i; ev[w] = j; et[w] = g.tier[k];
+        eml[w] = (g.lon[i] + g.lon[j]) / 2;
+        emt[w] = (g.lat[i] + g.lat[j]) / 2;
+        w++;
+      }
+    }
+  }
+  return { eu, ev, et, eml, emt, count: cnt };
+}
+
+function nearestNode(utm, lon, lat) {
+  const [e, n] = toUTM(lon, lat);
+  let best = -1, bestD2 = Infinity;
+  for (let i = 0; i < utm.east.length; i++) {
+    const de = utm.east[i] - e, dn = utm.north[i] - n;
+    const d2 = de * de + dn * dn;
+    if (d2 < bestD2) { bestD2 = d2; best = i; }
+  }
+  return { node: best, distM: Math.sqrt(bestD2) };
+}
+
+// ---------------------------------------------------------------------------
+// Dijkstra
+// ---------------------------------------------------------------------------
+function route(g, src, dst) {
+  const { offset, neighbor, weight, tier, multByCode } = g;
+  const dist = new Float64Array(g.N).fill(Infinity);
+  const prev = new Int32Array(g.N).fill(-1);
+  dist[src] = 0;
+  const heap = [[0, src]];
+  const push = (c, n) => {
+    heap.push([c, n]);
+    let i = heap.length - 1;
+    while (i > 0) { const p = (i - 1) >> 1; if (heap[p][0] <= heap[i][0]) break; [heap[p], heap[i]] = [heap[i], heap[p]]; i = p; }
+  };
+  const pop = () => {
+    const top = heap[0], last = heap.pop();
+    if (heap.length) { heap[0] = last; let i = 0; for (;;) { const l = 2 * i + 1, r = l + 1; let m = i;
+      if (l < heap.length && heap[l][0] < heap[m][0]) m = l;
+      if (r < heap.length && heap[r][0] < heap[m][0]) m = r;
+      if (m === i) break; [heap[m], heap[i]] = [heap[i], heap[m]]; i = m; } }
+    return top;
+  };
+  while (heap.length) {
+    const [c, u] = pop();
+    if (c > dist[u]) continue;
+    if (u === dst) break;
+    for (let k = offset[u]; k < offset[u + 1]; k++) {
+      const v = neighbor[k];
+      const nd = c + weight[k] * multByCode[tier[k]];
+      if (nd < dist[v]) { dist[v] = nd; prev[v] = u; push(nd, v); }
+    }
+  }
+  if (dist[dst] === Infinity) return null;
+  const path = [];
+  for (let u = dst; u !== -1; u = prev[u]) path.push(u);
+  path.reverse();
+
+  let distM = 0;
+  const tierM = {};
+  const segs = []; // [u, v, tier]
+  for (let i = 0; i + 1 < path.length; i++) {
+    const u = path[i], v = path[i + 1];
+    for (let k = offset[u]; k < offset[u + 1]; k++) {
+      if (neighbor[k] === v) {
+        distM += weight[k];
+        const name = g.nameByCode[tier[k]];
+        tierM[name] = (tierM[name] || 0) + weight[k];
+        segs.push([u, v, tier[k]]);
+        break;
+      }
+    }
+  }
+  return { distM, tierM, path, segs };
+}
+
+// ---------------------------------------------------------------------------
+// Renderização
+// ---------------------------------------------------------------------------
+const TIER_STYLE = {
+  0: { name: 'osm (vias oficiais)', color: '#4a90d9', w: 1.3, a: 0.9 },
+  1: { name: 'ibge (malha oficial)', color: '#9b6bf2', w: 1.0, a: 0.8 },
+  2: { name: 'previsia (traços)',   color: '#d98c4a', w: 0.6, a: 0.30 },
+  3: { name: 'ponte confirmada',    color: '#2ecc71', w: 1.6, a: 0.95 },
+  4: { name: 'ponte não confirmada',color: '#e74c3c', w: 1.2, a: 0.8 },
+};
+
+const canvas = document.getElementById('map');
+const ctx = canvas.getContext('2d');
+const statusEl = document.getElementById('status');
+const infoEl = document.getElementById('info');
+const legendEl = document.getElementById('legend');
+
+let g, utm, edges;
+let W = 0, H = 0;
+let view = { cx: 0, cy: 0, scale: 0 }; // centro (lon,lat) e pixels/grau
+let origin = null, dest = null, lastRoute = null;
+
+function resize() {
+  const dpr = window.devicePixelRatio || 1;
+  W = canvas.clientWidth; H = canvas.clientHeight;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+
+function toScreen(lon, lat) {
+  return [ (lon - view.cx) * view.scale + W / 2, (view.cy - lat) * view.scale + H / 2 ];
+}
+
+function render() {
+  ctx.fillStyle = '#101418';
+  ctx.fillRect(0, 0, W, H);
+
+  const margin = 60;
+  const lonMin = view.cx - (W / 2 + margin) / view.scale;
+  const lonMax = view.cx + (W / 2 + margin) / view.scale;
+  const latMin = view.cy - (H / 2 + margin) / view.scale;
+  const latMax = view.cy + (H / 2 + margin) / view.scale;
+
+  const paths = {};
+  for (const code of Object.keys(TIER_STYLE)) paths[code] = [];
+  for (let e = 0; e < edges.count; e++) {
+    const ml = edges.eml[e], mt = edges.emt[e];
+    if (ml < lonMin || ml > lonMax || mt < latMin || mt > latMax) continue;
+    const [x1, y1] = toScreen(g.lon[edges.eu[e]], g.lat[edges.eu[e]]);
+    const [x2, y2] = toScreen(g.lon[edges.ev[e]], g.lat[edges.ev[e]]);
+    paths[edges.et[e]].push(x1, y1, x2, y2);
+  }
+
+  for (const code of Object.keys(TIER_STYLE)) {
+    const st = TIER_STYLE[code];
+    const pts = paths[code];
+    if (!pts.length) continue;
+    ctx.beginPath();
+    for (let i = 0; i < pts.length; i += 4) {
+      ctx.moveTo(pts[i], pts[i + 1]);
+      ctx.lineTo(pts[i + 2], pts[i + 3]);
+    }
+    ctx.strokeStyle = st.color;
+    ctx.globalAlpha = st.a;
+    ctx.lineWidth = st.w;
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+  }
+
+  if (lastRoute) {
+    for (const [u, v, t] of lastRoute.segs) {
+      const [x1, y1] = toScreen(g.lon[u], g.lat[u]);
+      const [x2, y2] = toScreen(g.lon[v], g.lat[v]);
+      ctx.beginPath();
+      ctx.moveTo(x1, y1); ctx.lineTo(x2, y2);
+      ctx.strokeStyle = TIER_STYLE[t].color;
+      ctx.lineWidth = 4;
+      ctx.globalAlpha = 0.95;
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+  }
+
+  if (origin) drawDot(origin.lon, origin.lat, '#2ecc71', 'origem');
+  if (dest) drawDot(dest.lon, dest.lat, '#e74c3c', 'destino');
+}
+
+function drawDot(lon, lat, color, label) {
+  const [x, y] = toScreen(lon, lat);
+  ctx.beginPath();
+  ctx.arc(x, y, 6, 0, Math.PI * 2);
+  ctx.fillStyle = color;
+  ctx.fill();
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = '#fff';
+  ctx.stroke();
+  ctx.fillStyle = '#fff';
+  ctx.font = '12px system-ui';
+  ctx.fillText(label, x + 9, y - 6);
+}
+
+function showInfo(o, d, r) {
+  const pct = {};
+  for (const [name, m] of Object.entries(r.tierM)) pct[name] = ((100 * m) / r.distM).toFixed(1);
+  infoEl.style.display = 'block';
+  infoEl.innerHTML =
+    `<div class="row"><span>Distância na malha</span><b>${(r.distM / 1000).toFixed(1)} km</b></div>` +
+    `<div class="row"><span>Perna origem</span><b>${o.distM.toFixed(0)} m</b></div>` +
+    `<div class="row"><span>Perna destino</span><b>${d.distM.toFixed(0)} m</b></div>` +
+    `<div class="row"><span>Composição</span><b>${Object.entries(pct).map(([k, v]) => k + ' ' + v + '%').join(' · ') || '—'}</b></div>`;
+}
+
+function drawLegend() {
+  legendEl.innerHTML = Object.values(TIER_STYLE).map(st =>
+    `<div class="it"><span class="sw" style="background:${st.color}"></span>${st.name}</div>`
+  ).join('');
+}
+
+async function init() {
+  try {
+    g = await loadGraph('../paragominas.graph');
+    statusEl.textContent = 'Indexando nós (UTM)…';
+    utm = buildUtm(g);
+    statusEl.textContent = 'Indexando arestas…';
+    edges = buildEdges(g);
+
+    let lonMin = Infinity, lonMax = -Infinity, latMin = Infinity, latMax = -Infinity;
+    for (let i = 0; i < g.N; i++) {
+      if (g.lon[i] < lonMin) lonMin = g.lon[i];
+      if (g.lon[i] > lonMax) lonMax = g.lon[i];
+      if (g.lat[i] < latMin) latMin = g.lat[i];
+      if (g.lat[i] > latMax) latMax = g.lat[i];
+    }
+    view.cx = (lonMin + lonMax) / 2;
+    view.cy = (latMin + latMax) / 2;
+    const degX = lonMax - lonMin, degY = latMax - latMin;
+    view.scale = Math.min(W / degX, H / degY) * 0.98;
+
+    statusEl.textContent = `Pronto — ${g.N.toLocaleString()} nós, ${edges.count.toLocaleString()} arestas. Clique na origem.`;
+    drawLegend();
+    render();
+  } catch (err) {
+    statusEl.textContent = 'Falha ao carregar o grafo. Rode um servidor local: `python -m http.server` e abra http://localhost:8000/offline/';
+    console.error(err);
+  }
+}
+
+// --- interações ---
+let dragging = false, lastX = 0, lastY = 0;
+canvas.addEventListener('mousedown', e => { dragging = true; lastX = e.clientX; lastY = e.clientY; });
+window.addEventListener('mouseup', () => { dragging = false; });
+window.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  view.cx -= (e.clientX - lastX) / view.scale;
+  view.cy += (e.clientY - lastY) / view.scale;
+  lastX = e.clientX; lastY = e.clientY;
+  render();
+});
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  const factor = e.deltaY < 0 ? 1.2 : 1 / 1.2;
+  // zoom no ponto do cursor
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  const lon = view.cx + (mx - W / 2) / view.scale;
+  const lat = view.cy - (my - H / 2) / view.scale;
+  view.scale *= factor;
+  view.cx = lon - (mx - W / 2) / view.scale;
+  view.cy = lat + (my - H / 2) / view.scale;
+  render();
+}, { passive: false });
+canvas.addEventListener('click', e => {
+  if (dragging) return;
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  const lon = view.cx + (mx - W / 2) / view.scale;
+  const lat = view.cy - (my - H / 2) / view.scale;
+  const snap = nearestNode(utm, lon, lat);
+
+  if (!origin) { origin = { lon, lat, node: snap.node, distM: snap.distM }; statusEl.textContent = 'Agora clique no destino.'; render(); return; }
+  if (!dest) {
+    dest = { lon, lat, node: snap.node, distM: snap.distM };
+    const r = route(g, origin.node, dest.node);
+    if (!r) {
+      statusEl.textContent = 'Sem rota (origem e destino em componentes diferentes).';
+      infoEl.style.display = 'none';
+    } else {
+      lastRoute = r;
+      showInfo(origin, dest, r);
+      statusEl.textContent = 'Rota calculada. Arraste/zoom para explorar.';
+    }
+    render();
+  }
+});
+document.getElementById('clear').addEventListener('click', () => {
+  origin = dest = lastRoute = null;
+  infoEl.style.display = 'none';
+  statusEl.textContent = 'Clique na origem.';
+  render();
+});
+
+window.addEventListener('resize', () => { resize(); render(); });
+resize();
+init();
+</script>
+</body>
+</html>
