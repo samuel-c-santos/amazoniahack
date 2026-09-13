@@ -16,6 +16,12 @@ osm_bridges_paragominas.json
 # Coordenadas exatas dos alvos (regra: não publicar coordenadas)
 rotas_desafio3.geojson
 
+# Grafo binário serializado (dado derivado, contém coordenadas)
+paragominas.graph
+
+# Pares de teste (coordenadas exatas dos alvos)
+offline/test-pairs.json
+
 # Python
 __pycache__/
 *.pyc

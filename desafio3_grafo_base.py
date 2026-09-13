@@ -11,9 +11,11 @@ Requisitos: networkx, scipy, pyproj, shapely, geopandas
 import json
 import csv
 import math
+import struct
 from pathlib import Path
 
 import networkx as nx
+import numpy as np
 from scipy.spatial import cKDTree
 from pyproj import Transformer
 import geopandas as gpd
@@ -29,6 +31,7 @@ CAR_INFRA_PATH = Path("vw_area_infraestrutura_publica_cp/vw_area_infraestrutura_
 IBGE_RODOVIAS_PATH = Path("vw_sicar_rodovias/vw_sicar_rodoviasLine.shp")
 DRENAGEM_PATH = Path("vw_trecho_drenagem/vw_trecho_drenagem.shp")
 BRIDGES_PATH = Path("osm_bridges_paragominas.json")  # pontes conhecidas continuam vindo do OSM
+GRAPH_OUT_PATH = Path("paragominas.graph")  # grafo serializado (CSR binario) p/ uso offline
 
 # NAO usamos mais isto como corte de pass/fail: o README e' explicito que a
 # perna final a pe' nao e' erro, e' informacao que a rota precisa declarar.
@@ -231,6 +234,16 @@ TIER_MULTIPLIER = {
     "risky_bridge": 20.0,     # ponte que cruza rio sem passagem conhecida - evitar
 }
 
+# Codigos numericos dos tiers no binario serializado (risky_bridge nao aparece:
+# essas arestas sao removidas antes da serializacao).
+TIER_CODES = {
+    "osm": 0,
+    "ibge": 1,
+    "previsia": 2,
+    "confirmed_bridge": 3,
+    "unconfirmed_bridge": 4,
+}
+
 # Tolerancia de snap reduzida quando uma das pontas vem do IBGE - a camada
 # tem precisao posicional pior que OSM/PrevisIA (cauda de erro > 300m em
 # ~5-10% dos pontos, medido contra vias principais do OSM), entao usar a
@@ -276,6 +289,87 @@ def strip_risky_bridges(G):
     ]
     G.remove_edges_from(risky_edges)
     return G
+
+
+def serialize_graph(G, out_path):
+    """Serializa o grafo roteavel (ja' sem pontes de risco e com tier/custo
+    atribuidos) num binario compacto em CSR, para roteamento offline no
+    aparelho. Formato (tudo little-endian):
+
+        magic      4b   "AHG3"
+        version    u32  = 1
+        num_nodes  u32
+        num_edges  u32  (dirigido = 2 * arestas nao-dirigidas)
+        meta_len   u32
+        meta       meta_len bytes (JSON UTF-8: tiers, multiplicadores, datas)
+        lon        f64 * num_nodes
+        lat        f64 * num_nodes
+        offset     u32 * (num_nodes + 1)
+        neighbor   u32 * num_edges
+        weight     f32 * num_edges   (metros)
+        tier       u8  * num_edges   (codigo de TIER_CODES)
+
+    O grafo e' nao-dirigido; cada aresta entra duas vezes (i->j e j->i), e o
+    custo de roteamento se recompoe no aparelho como weight * TIER_MULTIPLIER.
+    """
+    nodes = list(G.nodes())
+    idx = {n: i for i, n in enumerate(nodes)}
+    n = len(nodes)
+
+    adj = [[] for _ in range(n)]
+    for u, v, d in G.edges(data=True):
+        i, j = idx[u], idx[v]
+        tier = TIER_CODES[d.get("tier", d.get("source", "osm"))]
+        w = float(d["weight"])
+        adj[i].append((j, w, tier))
+        adj[j].append((i, w, tier))
+
+    offset = [0] * (n + 1)
+    neighbor = []
+    weight = []
+    tier = []
+    for i in range(n):
+        offset[i] = len(neighbor)
+        for j, w, t in adj[i]:
+            neighbor.append(j)
+            weight.append(w)
+            tier.append(t)
+    offset[n] = len(neighbor)
+    m = len(neighbor)
+
+    meta = {
+        "crs": "EPSG:4326",
+        "tier_codes": TIER_CODES,
+        "tier_multipliers": TIER_MULTIPLIER,
+        "layers": {
+            "osm": {"fonte": "OpenStreetMap", "licenca": "ODbL", "data": None},
+            "ibge": {"fonte": "SICAR/IBGE vw_sicar_rodovias", "licenca": "dados abertos SICAR", "data": "data_carga (ver atributo de origem)"},
+            "previsia": {"fonte": "Imazon/Sentinel-2", "licenca": "consultar Imazon", "data": None},
+        },
+    }
+    meta_bytes = json.dumps(meta, ensure_ascii=False).encode("utf-8")
+
+    header = struct.pack("<4sIIII", b"AHG3", 1, n, m, len(meta_bytes))
+
+    lon = np.array([lon for lon, _ in nodes], dtype="<f8")
+    lat = np.array([lat for _, lat in nodes], dtype="<f8")
+    offset = np.array(offset, dtype="<u4")
+    neighbor = np.array(neighbor, dtype="<u4")
+    weight = np.array(weight, dtype="<f4")
+    tier = np.array(tier, dtype="u1")
+
+    blob = b"".join([
+        header,
+        meta_bytes,
+        lon.tobytes(),
+        lat.tobytes(),
+        offset.tobytes(),
+        neighbor.tobytes(),
+        weight.tobytes(),
+        tier.tobytes(),
+    ])
+    Path(out_path).write_bytes(blob)
+    print(f"  grafo serializado em {out_path}: {n} nos, {m} arestas (dirigido), {len(blob)/1e6:.1f} MB")
 
 
 def route_test_pairs(G, pairs_path, out_path):
@@ -487,3 +581,4 @@ if __name__ == "__main__":
     assign_costs(Gt)
     safe_G = strip_risky_bridges(Gt)
     route_test_pairs(safe_G, PAIRS_PATH, "rotas_desafio3.geojson")
+    serialize_graph(safe_G, GRAPH_OUT_PATH)

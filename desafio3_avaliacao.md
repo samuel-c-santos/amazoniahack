@@ -41,14 +41,18 @@ Nenhuma das 11 rotas atinge o rótulo "alta": todas dependem de ao menos uma pon
 
 O teto de 9–10/16 relatado no README do desafio (só OSM + PrevisIA) subiu para 11/16 ao incorporar a malha do IBGE e validar contra hidrografia oficial — mas apenas 1 desses 11 tem confirmação independente por infraestrutura declarada no CAR. Essa lacuna entre "geometricamente plausível" e "confirmado por segunda fonte" é, na nossa avaliação, o número mais honesto que temos para descrever a confiabilidade da malha nessa área.
 
+## Entrega offline-first
+
+O pipeline pesado (grafo, snap, validação hidrográfica) é **preparação**, feita uma única vez; o que roda no aparelho é um **grafo pré-computado** em CSR binário (`paragominas.graph`, 29,3 MB para 763.856 nós / 1.559.340 arestas dirigidas; schema em `desafio3_grafo_schema.md`). Um roteador embarcado (`offline/router.js`, sem dependências) lê o binário, indexa os nós em UTM e executa Dijkstra **sem rede**: 101 ms para carregar o grafo, 222 ms para o índice espacial, e a rota em dezenas de ms. O custo por aresta é `distância × multiplicador de confiança` — o mesmo critério do pipeline Python — e a paridade é **exata**: os 16 pares roteados no navegador reproduzem ponto a ponto os 11/16 do Python (par-01: 49,1 km, perna de destino 1.937 m, osm 61,9% / ibge 38,0% / ponte não confirmada 0,2%). A data dos dados por camada vai no cabeçalho do binário (PrevisIA = `null`, declarando a ausência em vez de estimar), atendendo "rotas com confiança e data" no próprio arquivo.
+
 ## O que ficou de fora
 
 - **Perfil de elevação/declividade.** Usamos a drenagem oficial só para o teste binário de cruzamento; não chegamos a baixar Copernicus DEM/SRTM para modelar declividade ou passabilidade sazonal.
 - **Os 5 pares sem rota** não foram investigados caso a caso — não sabemos se são isolamento real ou limite do método de snap.
-- **Empacotamento offline/mobile.** A entrega é um script Python (CLI), não um app Android nem um pacote Valhalla pré-computado.
-- **Marco bônus (mapa que melhora com o uso).** Não implementamos map-matching de traços de GPS.
+- **Visualização no aparelho (mapa + UI).** O roteador offline está pronto e validado (binário + Dijkstra em JS, sem rede); falta a camada de exibição — MapLibre/MBTiles das camadas e o desenho da rota colorida por tier.
+- **Marco bônus (mapa que melhora com o uso).** Não implementamos map-matching de traços de GPS; porém o grafo binário já é o substrato para isso — um traço validado em campo vira aresta de tier `gps_confirmed` (data + confiança alta) no arquivo, sem reescrever o roteador.
 - **Idade real da malha PrevisIA.** O atributo não existe nos dados (só `cat` e `fonte`); declaramos essa ausência em vez de estimar uma data.
 
 ## Custo
 
-Custo marginal por rota: **essencialmente zero**. Todo o pipeline é geoprocessamento clássico (NetworkX, Shapely, GeoPandas, SciPy, PyProj) — nenhuma chamada a modelo de linguagem ou de visão em nenhuma etapa, nem para a extração viária (já dada) nem para o roteamento. O custo real está na preparação, feita uma única vez: três downloads WFS públicos (SICAR/SEMAS-PA, SIGERH-PA) e duas consultas Overpass, ambos gratuitos e sem autenticação. O grafo unificado (≈764 mil nós) constrói e roteia os 16 pares em poucos minutos, sem GPU, num notebook comum.
+Custo marginal por rota: **essencialmente zero**. Todo o pipeline é geoprocessamento clássico (NetworkX, Shapely, GeoPandas, SciPy, PyProj) — nenhuma chamada a modelo de linguagem ou de visão em nenhuma etapa, nem para a extração viária (já dada) nem para o roteamento. O custo real está na preparação, feita uma única vez: três downloads WFS públicos (SICAR/SEMAS-PA, SIGERH-PA) e duas consultas Overpass, ambos gratuitos e sem autenticação. O grafo unificado (≈764 mil nós) constrói e roteia os 16 pares em poucos minutos, sem GPU, num notebook comum. A versão offline é ainda mais barata: o binário de 29,3 MB é carregado e roteado no aparelho/navegador sem nenhuma chamada externa — custo marginal por rota continua zero.
