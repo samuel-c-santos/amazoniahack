@@ -27,7 +27,7 @@ campo sem sinal.
 4. **Entregar offline** — o grafo final é serializado num binário compacto (CSR) e um
    roteador embarcado (JS, sem dependências) roda no navegador/aparelho sem rede.
 
-## Resultado (avaliação honesta)
+## Resultado
 
 | Métrica | Resultado |
 |---|---|
@@ -44,7 +44,7 @@ que temos. Análise completa em [`desafio3_avaliacao.md`](desafio3_avaliacao.md)
 ## Arquitetura
 
 ```mermaid
-flowchart LR
+flowchart TB
     %% Paleta de alta legibilidade (UX limpo, foco em contraste para o GitHub)
     classDef source fill:#f8fafc,stroke:#94a3b8,stroke-width:1px,color:#0f172a,rx:4px
     classDef process fill:#ffffff,stroke:#64748b,stroke-width:1.5px,color:#0f172a,rx:4px
@@ -67,7 +67,9 @@ flowchart LR
         P4["Cálculo de Tier e Custo"]:::process
 
         FONTES --> P1
-        P1 --> P2 --> P3 --> P4
+        P1 --> P2
+        P2 --> P3
+        P3 --> P4
     end
 
     A[("paragominas.graph<br/>(CSR ~29 MB)")]:::artifact
@@ -78,13 +80,14 @@ flowchart LR
         Q2["Algoritmo de Dijkstra<br/>(distância × confiança)"]:::query
         Q3(["Rota colorida por tier<br/>+ Relatório"]):::query
 
-        Q1 --> Q2 --> Q3
+        Q1 --> Q2
+        Q2 --> Q3
     end
 
     P4 -->|Serialização| A
     A -->|Fetch / Mmap| Q1
 
-    %% Estilos das caixas de contenção (borda tracejada elegante, sem fundo pesado)
+    %% Estilos das caixas de contenção
     style BUILD fill:none,stroke:#cbd5e1,stroke-width:2px,stroke-dasharray: 5 5
     style QUERY fill:none,stroke:#cbd5e1,stroke-width:2px,stroke-dasharray: 5 5
     style FONTES fill:none,stroke:none
