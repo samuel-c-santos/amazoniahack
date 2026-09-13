@@ -74,7 +74,7 @@ flowchart LR
         Q1 --> Q2 --> Q3 --> Q4
     end
 
-    %% O PULO DO GATO: Ligar as bordas dos quadros em vez dos nós de dentro.
+    %% LIGAR AS BORDAS DOS QUADROS.
     %% Isso trava o Mermaid e obriga ele a fazer as 3 colunas que você desenhou no ASCII.
     BUILD -->|Serialização| DB
     DB -->|Consulta| QUERY
