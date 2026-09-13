@@ -7,11 +7,10 @@ __MACOSX/
 AmazoniaHack 2026 Challenges FINAL.docx
 challenges-guide.pdf
 
-# Dados baixados (WFS/Overpass)
+# Dados baixados (WFS público — regeneráveis; não versionar binário grande)
 vw_sicar_rodovias/
 vw_area_infraestrutura_publica_cp/
 vw_trecho_drenagem/
-osm_bridges_paragominas.json
 
 # Coordenadas exatas dos alvos (regra: não publicar coordenadas)
 rotas_desafio3.geojson

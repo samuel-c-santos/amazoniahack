@@ -118,7 +118,7 @@ python desafio3_grafo_base.py
 Gera `paragominas.graph` e as rotas. As **entradas** (não redistribuídas aqui, por
 regra do desafio) são: as camadas de estradas OSM e PrevisIA do pacote do desafio, a
 malha viária e a drenagem oficiais (WFS público de SEMAS-PA/SICAR) e as pontes já
-mapeadas (Overpass/OSM).
+mapeadas (Overpass/OSM). Fontes exatas, URLs e queries em [`DATA.md`](DATA.md).
 
 ### 2. Demo offline (navegador)
 

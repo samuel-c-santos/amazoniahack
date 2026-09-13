@@ -1,0 +1,6957 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-12T16:15:01Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 186962775,
+  "bounds": {
+    "minlat": -2.9826046,
+    "minlon": -47.3607788,
+    "maxlat": -2.9823323,
+    "maxlon": -47.3605471
+  },
+  "nodes": [
+    1977113024,
+    1977113031
+  ],
+  "geometry": [
+    { "lat": -2.9823323, "lon": -47.3607788 },
+    { "lat": -2.9826046, "lon": -47.3605471 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "description": "Tamandaré",
+    "highway": "primary",
+    "layer": "1",
+    "name": "PA-125",
+    "ref": "PA-125"
+  }
+},
+{
+  "type": "way",
+  "id": 186962783,
+  "bounds": {
+    "minlat": -2.9989227,
+    "minlon": -47.3717339,
+    "maxlat": -2.9986317,
+    "maxlon": -47.3715735
+  },
+  "nodes": [
+    1822976376,
+    1825658749
+  ],
+  "geometry": [
+    { "lat": -2.9986317, "lon": -47.3717339 },
+    { "lat": -2.9989227, "lon": -47.3715735 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "layer": "1",
+    "name": "Rodovia dos Pioneiros",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 249163061,
+  "bounds": {
+    "minlat": -3.6289819,
+    "minlon": -47.1975059,
+    "maxlat": -3.6288575,
+    "maxlon": -47.1972080
+  },
+  "nodes": [
+    2558200379,
+    2558200380
+  ],
+  "geometry": [
+    { "lat": -3.6288575, "lon": -47.1975059 },
+    { "lat": -3.6289819, "lon": -47.1972080 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "source": "landsat",
+    "surface": "ground"
+  }
+},
+{
+  "type": "way",
+  "id": 249163062,
+  "bounds": {
+    "minlat": -3.5966154,
+    "minlon": -47.0729853,
+    "maxlat": -3.5963562,
+    "maxlon": -47.0727722
+  },
+  "nodes": [
+    2558199886,
+    2558199888
+  ],
+  "geometry": [
+    { "lat": -3.5963562, "lon": -47.0729853 },
+    { "lat": -3.5966154, "lon": -47.0727722 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 249163063,
+  "bounds": {
+    "minlat": -3.6760613,
+    "minlon": -47.0456735,
+    "maxlat": -3.6753505,
+    "maxlon": -47.0451701
+  },
+  "nodes": [
+    2558200536,
+    2558200521
+  ],
+  "geometry": [
+    { "lat": -3.6760613, "lon": -47.0451701 },
+    { "lat": -3.6753505, "lon": -47.0456735 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "source": "bing",
+    "surface": "ground"
+  }
+},
+{
+  "type": "way",
+  "id": 293714628,
+  "bounds": {
+    "minlat": -3.3465996,
+    "minlon": -46.8766144,
+    "maxlat": -3.3458478,
+    "maxlon": -46.8766067
+  },
+  "nodes": [
+    2973052935,
+    2973052936
+  ],
+  "geometry": [
+    { "lat": -3.3458478, "lon": -46.8766067 },
+    { "lat": -3.3465996, "lon": -46.8766144 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary"
+  }
+},
+{
+  "type": "way",
+  "id": 294050038,
+  "bounds": {
+    "minlat": -3.8358986,
+    "minlon": -48.3918114,
+    "maxlat": -3.8355721,
+    "maxlon": -48.3912267
+  },
+  "nodes": [
+    2976242073,
+    2976242074
+  ],
+  "geometry": [
+    { "lat": -3.8358986, "lon": -48.3918114 },
+    { "lat": -3.8355721, "lon": -48.3912267 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 294054787,
+  "bounds": {
+    "minlat": -3.6731203,
+    "minlon": -48.8448688,
+    "maxlat": -3.6721779,
+    "maxlon": -48.8440985
+  },
+  "nodes": [
+    924664515,
+    924663914,
+    924664104
+  ],
+  "geometry": [
+    { "lat": -3.6731203, "lon": -48.8448688 },
+    { "lat": -3.6728032, "lon": -48.8445869 },
+    { "lat": -3.6721779, "lon": -48.8440985 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 294774791,
+  "bounds": {
+    "minlat": -2.9798121,
+    "minlon": -47.4540288,
+    "maxlat": -2.9793185,
+    "maxlon": -47.4539097
+  },
+  "nodes": [
+    2983928536,
+    2983928535
+  ],
+  "geometry": [
+    { "lat": -2.9798121, "lon": -47.4540288 },
+    { "lat": -2.9793185, "lon": -47.4539097 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "federal",
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Belém-Brasília",
+    "ref": "BR-010",
+    "source": "IBGE,survey",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 314279566,
+  "bounds": {
+    "minlat": -2.9776894,
+    "minlon": -47.3527577,
+    "maxlat": -2.9776141,
+    "maxlon": -47.3526670
+  },
+  "nodes": [
+    3203286460,
+    2142156447
+  ],
+  "geometry": [
+    { "lat": -2.9776894, "lon": -47.3527577 },
+    { "lat": -2.9776141, "lon": -47.3526670 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "Rua Bujaru",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 316544928,
+  "bounds": {
+    "minlat": -2.9767426,
+    "minlon": -47.3565316,
+    "maxlat": -2.9765582,
+    "maxlon": -47.3563562
+  },
+  "nodes": [
+    2144926397,
+    3226685668
+  ],
+  "geometry": [
+    { "lat": -2.9767426, "lon": -47.3563562 },
+    { "lat": -2.9765582, "lon": -47.3565316 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "Avenida Agenor Alves",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 316544929,
+  "bounds": {
+    "minlat": -2.9945650,
+    "minlon": -47.3495671,
+    "maxlat": -2.9944367,
+    "maxlon": -47.3494367
+  },
+  "nodes": [
+    3226685672,
+    1824408021
+  ],
+  "geometry": [
+    { "lat": -2.9945650, "lon": -47.3495671 },
+    { "lat": -2.9944367, "lon": -47.3494367 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "lanes": "4",
+    "layer": "1",
+    "name": "Avenida Tropical"
+  }
+},
+{
+  "type": "way",
+  "id": 316544931,
+  "bounds": {
+    "minlat": -3.0012295,
+    "minlon": -47.3449696,
+    "maxlat": -3.0010654,
+    "maxlon": -47.3448240
+  },
+  "nodes": [
+    3226685674,
+    3226685673
+  ],
+  "geometry": [
+    { "lat": -3.0012295, "lon": -47.3448240 },
+    { "lat": -3.0010654, "lon": -47.3449696 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "PA-125",
+    "ref": "PA-125",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 316544933,
+  "bounds": {
+    "minlat": -3.0098135,
+    "minlon": -47.3400399,
+    "maxlat": -3.0096267,
+    "maxlon": -47.3397964
+  },
+  "nodes": [
+    3226685675,
+    1823028173
+  ],
+  "geometry": [
+    { "lat": -3.0098135, "lon": -47.3400399 },
+    { "lat": -3.0096267, "lon": -47.3397964 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "layer": "1",
+    "name": "Rodovia dos Pioneiros",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 316545255,
+  "bounds": {
+    "minlat": -2.9810881,
+    "minlon": -47.3529161,
+    "maxlat": -2.9810599,
+    "maxlon": -47.3527775
+  },
+  "nodes": [
+    2142156456,
+    2142156448
+  ],
+  "geometry": [
+    { "lat": -2.9810599, "lon": -47.3527775 },
+    { "lat": -2.9810881, "lon": -47.3529161 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "Rua Belos Campos",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 316545257,
+  "bounds": {
+    "minlat": -2.9888319,
+    "minlon": -47.3513688,
+    "maxlat": -2.9887547,
+    "maxlon": -47.3512772
+  },
+  "nodes": [
+    3226691599,
+    2144919939
+  ],
+  "geometry": [
+    { "lat": -2.9887547, "lon": -47.3512772 },
+    { "lat": -2.9888319, "lon": -47.3513688 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "Rua Equador",
+    "oneway": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 316545259,
+  "bounds": {
+    "minlat": -2.9796622,
+    "minlon": -47.3527481,
+    "maxlat": -2.9795726,
+    "maxlon": -47.3526575
+  },
+  "nodes": [
+    3226691598,
+    2142168087
+  ],
+  "geometry": [
+    { "lat": -2.9795726, "lon": -47.3526575 },
+    { "lat": -2.9796622, "lon": -47.3527481 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "name": "Rua Fênix"
+  }
+},
+{
+  "type": "way",
+  "id": 316545262,
+  "bounds": {
+    "minlat": -2.9855211,
+    "minlon": -47.3517597,
+    "maxlat": -2.9854956,
+    "maxlon": -47.3516538
+  },
+  "nodes": [
+    2160399800,
+    2160399777
+  ],
+  "geometry": [
+    { "lat": -2.9854956, "lon": -47.3517597 },
+    { "lat": -2.9855211, "lon": -47.3516538 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "oneway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 335971389,
+  "bounds": {
+    "minlat": -2.9920489,
+    "minlon": -47.3661740,
+    "maxlat": -2.9919661,
+    "maxlon": -47.3658753
+  },
+  "nodes": [
+    2198977245,
+    2198977233
+  ],
+  "geometry": [
+    { "lat": -2.9920489, "lon": -47.3658753 },
+    { "lat": -2.9919661, "lon": -47.3661740 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "40",
+    "name": "Rodovia PA-256",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 335971390,
+  "bounds": {
+    "minlat": -2.9921450,
+    "minlon": -47.3661851,
+    "maxlat": -2.9920616,
+    "maxlon": -47.3658922
+  },
+  "nodes": [
+    2198977201,
+    2198977250
+  ],
+  "geometry": [
+    { "lat": -2.9920616, "lon": -47.3661851 },
+    { "lat": -2.9921450, "lon": -47.3658922 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "lanes": "2",
+    "layer": "1",
+    "name": "Rodovia PA-256",
+    "oneway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 371249094,
+  "bounds": {
+    "minlat": -2.1190481,
+    "minlon": -49.0481104,
+    "maxlat": -2.1186195,
+    "maxlon": -49.0467025
+  },
+  "nodes": [
+    3748269330,
+    3748269329
+  ],
+  "geometry": [
+    { "lat": -2.1190481, "lon": -49.0481104 },
+    { "lat": -2.1186195, "lon": -49.0467025 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "motor_vehicle": "yes",
+    "name": "Rodovia Governador Moura Carvalho",
+    "ref": "PA-151",
+    "source": "https://github.com/osmlab/appledata/issues/126",
+    "source:geometry": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 372586141,
+  "bounds": {
+    "minlat": -2.9400441,
+    "minlon": -48.9559432,
+    "maxlat": -2.9400016,
+    "maxlon": -48.9557697
+  },
+  "nodes": [
+    3761438115,
+    3761438114
+  ],
+  "geometry": [
+    { "lat": -2.9400441, "lon": -48.9559432 },
+    { "lat": -2.9400016, "lon": -48.9557697 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "footway",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 410607607,
+  "bounds": {
+    "minlat": -2.3224950,
+    "minlon": -48.9316669,
+    "maxlat": -2.3224602,
+    "maxlon": -48.9312042
+  },
+  "nodes": [
+    4124143560,
+    4124143559
+  ],
+  "geometry": [
+    { "lat": -2.3224950, "lon": -48.9316669 },
+    { "lat": -2.3224602, "lon": -48.9312042 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 441777863,
+  "bounds": {
+    "minlat": -2.4164863,
+    "minlon": -48.1450900,
+    "maxlat": -2.4161201,
+    "maxlon": -48.1442493
+  },
+  "nodes": [
+    4394801744,
+    4394801743
+  ],
+  "geometry": [
+    { "lat": -2.4164863, "lon": -48.1450900 },
+    { "lat": -2.4161201, "lon": -48.1442493 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "ref": "PA-140",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 479869966,
+  "bounds": {
+    "minlat": -2.2751576,
+    "minlon": -46.9680374,
+    "maxlat": -2.2748972,
+    "maxlon": -46.9680337
+  },
+  "nodes": [
+    4729076323,
+    4729076667
+  ],
+  "geometry": [
+    { "lat": -2.2748972, "lon": -46.9680374 },
+    { "lat": -2.2751576, "lon": -46.9680337 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "Ponte sobre o Rio Piriá"
+  }
+},
+{
+  "type": "way",
+  "id": 479879195,
+  "bounds": {
+    "minlat": -2.3617270,
+    "minlon": -47.0637095,
+    "maxlat": -2.3616120,
+    "maxlon": -47.0635424
+  },
+  "nodes": [
+    4729106333,
+    4729160031
+  ],
+  "geometry": [
+    { "lat": -2.3616120, "lon": -47.0637095 },
+    { "lat": -2.3617270, "lon": -47.0635424 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada do Arrependido"
+  }
+},
+{
+  "type": "way",
+  "id": 479914011,
+  "bounds": {
+    "minlat": -2.3001216,
+    "minlon": -46.9910193,
+    "maxlat": -2.3000339,
+    "maxlon": -46.9909298
+  },
+  "nodes": [
+    4729476739,
+    4729476740
+  ],
+  "geometry": [
+    { "lat": -2.3000339, "lon": -46.9910193 },
+    { "lat": -2.3001216, "lon": -46.9909298 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Ponte sobre o Rio Piriá"
+  }
+},
+{
+  "type": "way",
+  "id": 479914013,
+  "bounds": {
+    "minlat": -2.2991603,
+    "minlon": -46.9916208,
+    "maxlat": -2.2990048,
+    "maxlon": -46.9915721
+  },
+  "nodes": [
+    4729476742,
+    4729476741
+  ],
+  "geometry": [
+    { "lat": -2.2990048, "lon": -46.9916208 },
+    { "lat": -2.2991603, "lon": -46.9915721 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Ponte sobre o Rio Piriá"
+  }
+},
+{
+  "type": "way",
+  "id": 479922105,
+  "bounds": {
+    "minlat": -2.2675292,
+    "minlon": -46.9604894,
+    "maxlat": -2.2672872,
+    "maxlon": -46.9592738
+  },
+  "nodes": [
+    4729540145,
+    4729540146,
+    4729540147,
+    4729540148,
+    4729540149,
+    4729540150,
+    4729540151,
+    4729540152,
+    4729540153,
+    4729540154,
+    4729540155,
+    4729540156
+  ],
+  "geometry": [
+    { "lat": -2.2672872, "lon": -46.9604894 },
+    { "lat": -2.2673871, "lon": -46.9603288 },
+    { "lat": -2.2674094, "lon": -46.9602109 },
+    { "lat": -2.2674114, "lon": -46.9600686 },
+    { "lat": -2.2674419, "lon": -46.9598918 },
+    { "lat": -2.2674805, "lon": -46.9597678 },
+    { "lat": -2.2674805, "lon": -46.9596987 },
+    { "lat": -2.2675008, "lon": -46.9595726 },
+    { "lat": -2.2675191, "lon": -46.9594913 },
+    { "lat": -2.2675292, "lon": -46.9593877 },
+    { "lat": -2.2675130, "lon": -46.9593368 },
+    { "lat": -2.2673789, "lon": -46.9592738 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "path"
+  }
+},
+{
+  "type": "way",
+  "id": 480303402,
+  "bounds": {
+    "minlat": -2.3360022,
+    "minlon": -47.0517371,
+    "maxlat": -2.3359722,
+    "maxlon": -47.0516254
+  },
+  "nodes": [
+    4733039751,
+    4733039752
+  ],
+  "geometry": [
+    { "lat": -2.3359722, "lon": -47.0516254 },
+    { "lat": -2.3360022, "lon": -47.0517371 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-124"
+  }
+},
+{
+  "type": "way",
+  "id": 480303405,
+  "bounds": {
+    "minlat": -2.3422426,
+    "minlon": -47.0564364,
+    "maxlat": -2.3422069,
+    "maxlon": -47.0562538
+  },
+  "nodes": [
+    4729160619,
+    4733039785
+  ],
+  "geometry": [
+    { "lat": -2.3422426, "lon": -47.0562538 },
+    { "lat": -2.3422069, "lon": -47.0564364 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 480303407,
+  "bounds": {
+    "minlat": -2.3577116,
+    "minlon": -47.0619485,
+    "maxlat": -2.3575782,
+    "maxlon": -47.0619073
+  },
+  "nodes": [
+    4729106179,
+    4729106180
+  ],
+  "geometry": [
+    { "lat": -2.3575782, "lon": -47.0619073 },
+    { "lat": -2.3577116, "lon": -47.0619485 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-124"
+  }
+},
+{
+  "type": "way",
+  "id": 480303411,
+  "bounds": {
+    "minlat": -2.3643369,
+    "minlon": -47.0544796,
+    "maxlat": -2.3642937,
+    "maxlon": -47.0543489
+  },
+  "nodes": [
+    4729475794,
+    4729475795
+  ],
+  "geometry": [
+    { "lat": -2.3642937, "lon": -47.0544796 },
+    { "lat": -2.3643369, "lon": -47.0543489 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track"
+  }
+},
+{
+  "type": "way",
+  "id": 480303444,
+  "bounds": {
+    "minlat": -2.3758891,
+    "minlon": -47.0059983,
+    "maxlat": -2.3757865,
+    "maxlon": -47.0058906
+  },
+  "nodes": [
+    4733040785,
+    4729160541
+  ],
+  "geometry": [
+    { "lat": -2.3757865, "lon": -47.0058906 },
+    { "lat": -2.3758891, "lon": -47.0059983 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 480303449,
+  "bounds": {
+    "minlat": -2.3958920,
+    "minlon": -47.0041407,
+    "maxlat": -2.3958255,
+    "maxlon": -47.0041332
+  },
+  "nodes": [
+    4733040803,
+    4733040802
+  ],
+  "geometry": [
+    { "lat": -2.3958255, "lon": -47.0041407 },
+    { "lat": -2.3958920, "lon": -47.0041332 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 480303452,
+  "bounds": {
+    "minlat": -2.3634426,
+    "minlon": -47.0086025,
+    "maxlat": -2.3633870,
+    "maxlon": -47.0084338
+  },
+  "nodes": [
+    4731312269,
+    4733040813
+  ],
+  "geometry": [
+    { "lat": -2.3634426, "lon": -47.0086025 },
+    { "lat": -2.3633870, "lon": -47.0084338 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 480303466,
+  "bounds": {
+    "minlat": -2.3157189,
+    "minlon": -46.9994156,
+    "maxlat": -2.3156294,
+    "maxlon": -46.9993502
+  },
+  "nodes": [
+    4733041253,
+    4733041254
+  ],
+  "geometry": [
+    { "lat": -2.3156294, "lon": -46.9993502 },
+    { "lat": -2.3157189, "lon": -46.9994156 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 480303467,
+  "bounds": {
+    "minlat": -2.2946102,
+    "minlon": -46.9793431,
+    "maxlat": -2.2945441,
+    "maxlon": -46.9792325
+  },
+  "nodes": [
+    4733041292,
+    4733041291
+  ],
+  "geometry": [
+    { "lat": -2.2945441, "lon": -46.9792325 },
+    { "lat": -2.2946102, "lon": -46.9793431 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 480303469,
+  "bounds": {
+    "minlat": -2.2669099,
+    "minlon": -46.9655157,
+    "maxlat": -2.2668504,
+    "maxlon": -46.9654536
+  },
+  "nodes": [
+    4733041302,
+    4733041301
+  ],
+  "geometry": [
+    { "lat": -2.2669099, "lon": -46.9655157 },
+    { "lat": -2.2668504, "lon": -46.9654536 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "name": "Rua Marechal Deodoro da Fonseca"
+  }
+},
+{
+  "type": "way",
+  "id": 480303471,
+  "bounds": {
+    "minlat": -2.2686342,
+    "minlon": -46.9644391,
+    "maxlat": -2.2685459,
+    "maxlon": -46.9643439
+  },
+  "nodes": [
+    4733041304,
+    4733041303
+  ],
+  "geometry": [
+    { "lat": -2.2685459, "lon": -46.9643439 },
+    { "lat": -2.2686342, "lon": -46.9644391 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "40",
+    "name": "Avenida São Pedro",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 480309855,
+  "bounds": {
+    "minlat": -2.3235699,
+    "minlon": -47.0299551,
+    "maxlat": -2.3234900,
+    "maxlon": -47.0298209
+  },
+  "nodes": [
+    4733125533,
+    4733125534
+  ],
+  "geometry": [
+    { "lat": -2.3234900, "lon": -47.0299551 },
+    { "lat": -2.3235699, "lon": -47.0298209 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track"
+  }
+},
+{
+  "type": "way",
+  "id": 480319219,
+  "bounds": {
+    "minlat": -2.7724109,
+    "minlon": -46.8024933,
+    "maxlat": -2.7720780,
+    "maxlon": -46.8023917
+  },
+  "nodes": [
+    4733212986,
+    4733212929
+  ],
+  "geometry": [
+    { "lat": -2.7720780, "lon": -46.8023917 },
+    { "lat": -2.7724109, "lon": -46.8024933 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "name": "Ponte sobre o Rio Uraim"
+  }
+},
+{
+  "type": "way",
+  "id": 480319223,
+  "bounds": {
+    "minlat": -2.6501448,
+    "minlon": -46.9136538,
+    "maxlat": -2.6500223,
+    "maxlon": -46.9136518
+  },
+  "nodes": [
+    4729381344,
+    4733212993
+  ],
+  "geometry": [
+    { "lat": -2.6500223, "lon": -46.9136518 },
+    { "lat": -2.6501448, "lon": -46.9136538 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 480323673,
+  "bounds": {
+    "minlat": -2.1632195,
+    "minlon": -47.0023010,
+    "maxlat": -2.1631579,
+    "maxlon": -47.0021894
+  },
+  "nodes": [
+    4729160704,
+    4733241147
+  ],
+  "geometry": [
+    { "lat": -2.1632195, "lon": -47.0023010 },
+    { "lat": -2.1631579, "lon": -47.0021894 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "name": "Estrada do Bom Futuro"
+  }
+},
+{
+  "type": "way",
+  "id": 480323676,
+  "bounds": {
+    "minlat": -2.1319761,
+    "minlon": -46.9876057,
+    "maxlat": -2.1318870,
+    "maxlon": -46.9876019
+  },
+  "nodes": [
+    4733241149,
+    4733241150
+  ],
+  "geometry": [
+    { "lat": -2.1319761, "lon": -46.9876057 },
+    { "lat": -2.1318870, "lon": -46.9876019 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "name": "Estrada do Bom Futuro"
+  }
+},
+{
+  "type": "way",
+  "id": 480323685,
+  "bounds": {
+    "minlat": -2.1659176,
+    "minlon": -46.9701534,
+    "maxlat": -2.1657321,
+    "maxlon": -46.9700320
+  },
+  "nodes": [
+    4733241246,
+    4733241247
+  ],
+  "geometry": [
+    { "lat": -2.1657321, "lon": -46.9700320 },
+    { "lat": -2.1659176, "lon": -46.9701534 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "ref": "PA-124",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 480323688,
+  "bounds": {
+    "minlat": -2.2021840,
+    "minlon": -46.9721652,
+    "maxlat": -2.2019361,
+    "maxlon": -46.9721375
+  },
+  "nodes": [
+    4733241273,
+    4733241272
+  ],
+  "geometry": [
+    { "lat": -2.2019361, "lon": -46.9721375 },
+    { "lat": -2.2021840, "lon": -46.9721652 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "ref": "PA-124",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 480404484,
+  "bounds": {
+    "minlat": -2.2819691,
+    "minlon": -46.9603964,
+    "maxlat": -2.2819423,
+    "maxlon": -46.9603018
+  },
+  "nodes": [
+    4734175298,
+    4729986326
+  ],
+  "geometry": [
+    { "lat": -2.2819423, "lon": -46.9603964 },
+    { "lat": -2.2819691, "lon": -46.9603018 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada da Marajoara"
+  }
+},
+{
+  "type": "way",
+  "id": 482050484,
+  "bounds": {
+    "minlat": -2.2936897,
+    "minlon": -46.8696662,
+    "maxlat": -2.2936452,
+    "maxlon": -46.8695455
+  },
+  "nodes": [
+    4749247621,
+    4749247520
+  ],
+  "geometry": [
+    { "lat": -2.2936452, "lon": -46.8696662 },
+    { "lat": -2.2936897, "lon": -46.8695455 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "name": "Estrada do Guajará"
+  }
+},
+{
+  "type": "way",
+  "id": 482050491,
+  "bounds": {
+    "minlat": -2.3136037,
+    "minlon": -46.8172008,
+    "maxlat": -2.3134992,
+    "maxlon": -46.8170621
+  },
+  "nodes": [
+    4749247805,
+    4749247806
+  ],
+  "geometry": [
+    { "lat": -2.3134992, "lon": -46.8172008 },
+    { "lat": -2.3136037, "lon": -46.8170621 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada do Guajará"
+  }
+},
+{
+  "type": "way",
+  "id": 482056526,
+  "bounds": {
+    "minlat": -2.2266082,
+    "minlon": -47.0020227,
+    "maxlat": -2.2265533,
+    "maxlon": -47.0019246
+  },
+  "nodes": [
+    4749332995,
+    4749332996
+  ],
+  "geometry": [
+    { "lat": -2.2265533, "lon": -47.0019246 },
+    { "lat": -2.2266082, "lon": -47.0020227 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "name": "Estrada do Forte",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 490452269,
+  "bounds": {
+    "minlat": -2.4307596,
+    "minlon": -48.7388141,
+    "maxlat": -2.4303817,
+    "maxlon": -48.7387511
+  },
+  "nodes": [
+    4826337505,
+    924663899
+  ],
+  "geometry": [
+    { "lat": -2.4303817, "lon": -48.7387511 },
+    { "lat": -2.4307596, "lon": -48.7388141 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "maxspeed": "80",
+    "ref": "PA-475",
+    "source": "survey"
+  }
+},
+{
+  "type": "way",
+  "id": 490726139,
+  "bounds": {
+    "minlat": -2.7838941,
+    "minlon": -48.3523214,
+    "maxlat": -2.7834425,
+    "maxlon": -48.3523113
+  },
+  "nodes": [
+    4829148609,
+    4829148608
+  ],
+  "geometry": [
+    { "lat": -2.7834425, "lon": -48.3523214 },
+    { "lat": -2.7838941, "lon": -48.3523113 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-256",
+    "source": "IBGE"
+  }
+},
+{
+  "type": "way",
+  "id": 518090234,
+  "bounds": {
+    "minlat": -2.4160760,
+    "minlon": -48.1122959,
+    "maxlat": -2.4159139,
+    "maxlon": -48.1122436
+  },
+  "nodes": [
+    5054589784,
+    5054589783
+  ],
+  "geometry": [
+    { "lat": -2.4160760, "lon": -48.1122436 },
+    { "lat": -2.4159139, "lon": -48.1122959 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 518115316,
+  "bounds": {
+    "minlat": -2.9695032,
+    "minlon": -47.6222912,
+    "maxlat": -2.9693880,
+    "maxlon": -47.6219746
+  },
+  "nodes": [
+    5054800051,
+    5054800050
+  ],
+  "geometry": [
+    { "lat": -2.9693880, "lon": -47.6222912 },
+    { "lat": -2.9695032, "lon": -47.6219746 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-256",
+    "source": "IBGE",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 518953250,
+  "bounds": {
+    "minlat": -3.4553943,
+    "minlon": -47.2702713,
+    "maxlat": -3.4548535,
+    "maxlon": -47.2702003
+  },
+  "nodes": [
+    5061263770,
+    453454196
+  ],
+  "geometry": [
+    { "lat": -3.4553943, "lon": -47.2702713 },
+    { "lat": -3.4548535, "lon": -47.2702003 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "layer": "1",
+    "oneway": "no",
+    "ref": "PA-125",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 518953272,
+  "bounds": {
+    "minlat": -3.3590162,
+    "minlon": -47.2554749,
+    "maxlat": -3.3584459,
+    "maxlon": -47.2554562
+  },
+  "nodes": [
+    5061264258,
+    5061264257
+  ],
+  "geometry": [
+    { "lat": -3.3590162, "lon": -47.2554749 },
+    { "lat": -3.3584459, "lon": -47.2554562 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "layer": "1",
+    "oneway": "no",
+    "ref": "PA-125",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 518953273,
+  "bounds": {
+    "minlat": -3.3104758,
+    "minlon": -47.2664056,
+    "maxlat": -3.3103275,
+    "maxlon": -47.2663654
+  },
+  "nodes": [
+    5061264264,
+    5061264265
+  ],
+  "geometry": [
+    { "lat": -3.3104758, "lon": -47.2663654 },
+    { "lat": -3.3103275, "lon": -47.2664056 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "lanes": "2",
+    "layer": "1",
+    "oneway": "no",
+    "ref": "PA-125",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 580567072,
+  "bounds": {
+    "minlat": -3.9692433,
+    "minlon": -49.0522854,
+    "maxlat": -3.9691369,
+    "maxlon": -49.0522579
+  },
+  "nodes": [
+    4508457521,
+    5557324240
+  ],
+  "geometry": [
+    { "lat": -3.9691369, "lon": -49.0522854 },
+    { "lat": -3.9692433, "lon": -49.0522579 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "maxspeed": "80",
+    "oneway": "no",
+    "ref": "PA-150",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 580567074,
+  "bounds": {
+    "minlat": -3.9983806,
+    "minlon": -49.0479865,
+    "maxlat": -3.9981953,
+    "maxlon": -49.0478987
+  },
+  "nodes": [
+    1588020330,
+    5557324241
+  ],
+  "geometry": [
+    { "lat": -3.9981953, "lon": -49.0479865 },
+    { "lat": -3.9983806, "lon": -49.0478987 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "maxspeed": "80",
+    "oneway": "no",
+    "ref": "PA-150",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 580567076,
+  "bounds": {
+    "minlat": -4.0218186,
+    "minlon": -49.0448899,
+    "maxlat": -4.0215537,
+    "maxlon": -49.0448383
+  },
+  "nodes": [
+    1588020635,
+    5557324242
+  ],
+  "geometry": [
+    { "lat": -4.0215537, "lon": -49.0448899 },
+    { "lat": -4.0218186, "lon": -49.0448383 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "maxspeed": "80",
+    "oneway": "no",
+    "ref": "PA-150"
+  }
+},
+{
+  "type": "way",
+  "id": 598615118,
+  "bounds": {
+    "minlat": -2.1186195,
+    "minlon": -49.0467025,
+    "maxlat": -2.1177251,
+    "maxlon": -49.0441933
+  },
+  "nodes": [
+    3748269329,
+    5697189229
+  ],
+  "geometry": [
+    { "lat": -2.1186195, "lon": -49.0467025 },
+    { "lat": -2.1177251, "lon": -49.0441933 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "lanes": "2",
+    "layer": "1",
+    "name": "Rodovia Governador Moura Carvalho",
+    "ref": "PA-151",
+    "surface": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 598615120,
+  "bounds": {
+    "minlat": -2.1199713,
+    "minlon": -49.0509550,
+    "maxlat": -2.1190481,
+    "maxlon": -49.0481104
+  },
+  "nodes": [
+    7070993014,
+    3748269330
+  ],
+  "geometry": [
+    { "lat": -2.1199713, "lon": -49.0509550 },
+    { "lat": -2.1190481, "lon": -49.0481104 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "lanes": "2",
+    "layer": "1",
+    "name": "Rodovia Governador Moura Carvalho",
+    "ref": "PA-151",
+    "surface": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 647780225,
+  "bounds": {
+    "minlat": -2.9961193,
+    "minlon": -47.3478170,
+    "maxlat": -2.9960075,
+    "maxlon": -47.3476854
+  },
+  "nodes": [
+    6082788807,
+    6082788836
+  ],
+  "geometry": [
+    { "lat": -2.9960075, "lon": -47.3476854 },
+    { "lat": -2.9961193, "lon": -47.3478170 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "footway",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 672509988,
+  "bounds": {
+    "minlat": -3.0568732,
+    "minlon": -47.4157130,
+    "maxlat": -3.0568406,
+    "maxlon": -47.4155330
+  },
+  "nodes": [
+    2920329315,
+    6297703148
+  ],
+  "geometry": [
+    { "lat": -3.0568406, "lon": -47.4157130 },
+    { "lat": -3.0568732, "lon": -47.4155330 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 672509990,
+  "bounds": {
+    "minlat": -3.0774778,
+    "minlon": -47.4257746,
+    "maxlat": -3.0774678,
+    "maxlon": -47.4256443
+  },
+  "nodes": [
+    6297703149,
+    6297703150
+  ],
+  "geometry": [
+    { "lat": -3.0774778, "lon": -47.4257746 },
+    { "lat": -3.0774678, "lon": -47.4256443 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "Rodovia Mateus Moreira",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 677142219,
+  "bounds": {
+    "minlat": -2.9961762,
+    "minlon": -47.3478839,
+    "maxlat": -2.9961193,
+    "maxlon": -47.3478170
+  },
+  "nodes": [
+    6082788836,
+    6082788837,
+    6082788810
+  ],
+  "geometry": [
+    { "lat": -2.9961193, "lon": -47.3478170 },
+    { "lat": -2.9961535, "lon": -47.3478572 },
+    { "lat": -2.9961762, "lon": -47.3478839 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "footway",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 684853454,
+  "bounds": {
+    "minlat": -2.4223307,
+    "minlon": -48.1562814,
+    "maxlat": -2.4214986,
+    "maxlon": -48.1561768
+  },
+  "nodes": [
+    6416810411,
+    6416810412
+  ],
+  "geometry": [
+    { "lat": -2.4223307, "lon": -48.1562814 },
+    { "lat": -2.4214986, "lon": -48.1561768 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 697208470,
+  "bounds": {
+    "minlat": -3.0060441,
+    "minlon": -47.3425422,
+    "maxlat": -3.0058393,
+    "maxlon": -47.3422940
+  },
+  "nodes": [
+    6548287123,
+    6548287122
+  ],
+  "geometry": [
+    { "lat": -3.0058393, "lon": -47.3422940 },
+    { "lat": -3.0060441, "lon": -47.3425422 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 711568257,
+  "bounds": {
+    "minlat": -2.3564664,
+    "minlon": -48.1236510,
+    "maxlat": -2.3563330,
+    "maxlon": -48.1235826
+  },
+  "nodes": [
+    6690109364,
+    6690109365
+  ],
+  "geometry": [
+    { "lat": -2.3564664, "lon": -48.1236510 },
+    { "lat": -2.3563330, "lon": -48.1235826 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "ref": "PA-140",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 711580991,
+  "bounds": {
+    "minlat": -3.7558151,
+    "minlon": -47.5336046,
+    "maxlat": -3.7556404,
+    "maxlon": -47.5335107
+  },
+  "nodes": [
+    6690244515,
+    6690244530
+  ],
+  "geometry": [
+    { "lat": -3.7558151, "lon": -47.5335107 },
+    { "lat": -3.7556404, "lon": -47.5336046 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "source": "survey",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 711616176,
+  "bounds": {
+    "minlat": -3.7774900,
+    "minlon": -49.0703373,
+    "maxlat": -3.7771173,
+    "maxlon": -49.0701154
+  },
+  "nodes": [
+    6690503230,
+    6690503229
+  ],
+  "geometry": [
+    { "lat": -3.7771173, "lon": -49.0703373 },
+    { "lat": -3.7774900, "lon": -49.0701154 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "trunk",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "80",
+    "ref": "PA-150;PA-475",
+    "source": "landsat; survey",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 714960682,
+  "bounds": {
+    "minlat": -2.3365812,
+    "minlon": -47.0472902,
+    "maxlat": -2.3365140,
+    "maxlon": -47.0471644
+  },
+  "nodes": [
+    6720148294,
+    4729476713
+  ],
+  "geometry": [
+    { "lat": -2.3365812, "lon": -47.0471644 },
+    { "lat": -2.3365140, "lon": -47.0472902 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 714960689,
+  "bounds": {
+    "minlat": -2.3539427,
+    "minlon": -47.0589705,
+    "maxlat": -2.3539237,
+    "maxlon": -47.0588599
+  },
+  "nodes": [
+    4729106416,
+    4729106417
+  ],
+  "geometry": [
+    { "lat": -2.3539237, "lon": -47.0589705 },
+    { "lat": -2.3539427, "lon": -47.0588599 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 732255386,
+  "bounds": {
+    "minlat": -3.0331417,
+    "minlon": -47.3973276,
+    "maxlat": -3.0330962,
+    "maxlon": -47.3972692
+  },
+  "nodes": [
+    6856701369,
+    6856669437
+  ],
+  "geometry": [
+    { "lat": -3.0330962, "lon": -47.3972692 },
+    { "lat": -3.0331417, "lon": -47.3973276 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 732273528,
+  "bounds": {
+    "minlat": -3.7327779,
+    "minlon": -47.5203243,
+    "maxlat": -3.7327404,
+    "maxlon": -47.5201312
+  },
+  "nodes": [
+    6416305674,
+    10152113296,
+    6856924497
+  ],
+  "geometry": [
+    { "lat": -3.7327404, "lon": -47.5203243 },
+    { "lat": -3.7327605, "lon": -47.5202209 },
+    { "lat": -3.7327779, "lon": -47.5201312 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 732800820,
+  "bounds": {
+    "minlat": -2.9479877,
+    "minlon": -47.3894727,
+    "maxlat": -2.9478130,
+    "maxlon": -47.3893299
+  },
+  "nodes": [
+    6861934970,
+    6861934972
+  ],
+  "geometry": [
+    { "lat": -2.9478130, "lon": -47.3894727 },
+    { "lat": -2.9479877, "lon": -47.3893299 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "description": "Tamandare",
+    "highway": "primary",
+    "layer": "1",
+    "name": "PA-125",
+    "ref": "PA-125"
+  }
+},
+{
+  "type": "way",
+  "id": 732820762,
+  "bounds": {
+    "minlat": -3.7208646,
+    "minlon": -47.4895889,
+    "maxlat": -3.7204752,
+    "maxlon": -47.4894896
+  },
+  "nodes": [
+    6862108526,
+    6862108527
+  ],
+  "geometry": [
+    { "lat": -3.7208646, "lon": -47.4895889 },
+    { "lat": -3.7204752, "lon": -47.4894896 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "federal",
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Rodovia Belém-Brasília",
+    "ref": "BR-010",
+    "source": "IBGE,survey"
+  }
+},
+{
+  "type": "way",
+  "id": 732900070,
+  "bounds": {
+    "minlat": -3.0427861,
+    "minlon": -47.4082603,
+    "maxlat": -3.0427620,
+    "maxlon": -47.4081402
+  },
+  "nodes": [
+    6862855763,
+    6862855762
+  ],
+  "geometry": [
+    { "lat": -3.0427620, "lon": -47.4081402 },
+    { "lat": -3.0427861, "lon": -47.4082603 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 732900073,
+  "bounds": {
+    "minlat": -3.0352892,
+    "minlon": -47.4044522,
+    "maxlat": -3.0351733,
+    "maxlon": -47.4042825
+  },
+  "nodes": [
+    6862862320,
+    6862862319
+  ],
+  "geometry": [
+    { "lat": -3.0352892, "lon": -47.4042825 },
+    { "lat": -3.0351733, "lon": -47.4044522 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 735438075,
+  "bounds": {
+    "minlat": -3.7847544,
+    "minlon": -47.5328811,
+    "maxlat": -3.7846955,
+    "maxlon": -47.5327550
+  },
+  "nodes": [
+    6888365581,
+    6888365582
+  ],
+  "geometry": [
+    { "lat": -3.7847544, "lon": -47.5328811 },
+    { "lat": -3.7846955, "lon": -47.5327550 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 737226238,
+  "bounds": {
+    "minlat": -2.9339722,
+    "minlon": -48.9074052,
+    "maxlat": -2.9339307,
+    "maxlon": -48.9073147
+  },
+  "nodes": [
+    6902029442,
+    6902029443
+  ],
+  "geometry": [
+    { "lat": -2.9339722, "lon": -48.9074052 },
+    { "lat": -2.9339307, "lon": -48.9073147 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 737755971,
+  "bounds": {
+    "minlat": -2.5541427,
+    "minlon": -47.4948446,
+    "maxlat": -2.5538480,
+    "maxlon": -47.4947944
+  },
+  "nodes": [
+    6904666839,
+    6904666840
+  ],
+  "geometry": [
+    { "lat": -2.5541427, "lon": -47.4947944 },
+    { "lat": -2.5538480, "lon": -47.4948446 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "federal",
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "lit": "no",
+    "maxspeed": "60",
+    "name": "Belém-Brasília",
+    "ref": "BR-010",
+    "source": "IBGE,survey",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 737777444,
+  "bounds": {
+    "minlat": -2.3887027,
+    "minlon": -48.2139767,
+    "maxlat": -2.3886608,
+    "maxlon": -48.2139020
+  },
+  "nodes": [
+    6907821009,
+    6907795658
+  ],
+  "geometry": [
+    { "lat": -2.3887027, "lon": -48.2139020 },
+    { "lat": -2.3886608, "lon": -48.2139767 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 737791593,
+  "bounds": {
+    "minlat": -2.3938319,
+    "minlon": -48.2285240,
+    "maxlat": -2.3937663,
+    "maxlon": -48.2284342
+  },
+  "nodes": [
+    6907969258,
+    4829079827
+  ],
+  "geometry": [
+    { "lat": -2.3938319, "lon": -48.2284342 },
+    { "lat": -2.3937663, "lon": -48.2285240 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 738457733,
+  "bounds": {
+    "minlat": -2.1329945,
+    "minlon": -47.5634468,
+    "maxlat": -2.1329510,
+    "maxlon": -47.5632202
+  },
+  "nodes": [
+    4173895031,
+    4173895032
+  ],
+  "geometry": [
+    { "lat": -2.1329510, "lon": -47.5634468 },
+    { "lat": -2.1329945, "lon": -47.5632202 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "lit": "yes",
+    "name": "Rua São Francisco",
+    "surface": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 740571619,
+  "bounds": {
+    "minlat": -2.8760855,
+    "minlon": -48.9342226,
+    "maxlat": -2.8760473,
+    "maxlon": -48.9341663
+  },
+  "nodes": [
+    6933485274,
+    6933485273
+  ],
+  "geometry": [
+    { "lat": -2.8760473, "lon": -48.9342226 },
+    { "lat": -2.8760855, "lon": -48.9341663 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 742063739,
+  "bounds": {
+    "minlat": -2.9960479,
+    "minlon": -47.3504265,
+    "maxlat": -2.9959970,
+    "maxlon": -47.3503836
+  },
+  "nodes": [
+    6947026918,
+    1823559641
+  ],
+  "geometry": [
+    { "lat": -2.9959970, "lon": -47.3504265 },
+    { "lat": -2.9960479, "lon": -47.3503836 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "name": "Rua Trinta e Um de Março"
+  }
+},
+{
+  "type": "way",
+  "id": 742071586,
+  "bounds": {
+    "minlat": -3.0047303,
+    "minlon": -47.3493616,
+    "maxlat": -3.0046928,
+    "maxlon": -47.3492597
+  },
+  "nodes": [
+    6947256962,
+    6947256963
+  ],
+  "geometry": [
+    { "lat": -3.0047303, "lon": -47.3492597 },
+    { "lat": -3.0046928, "lon": -47.3493616 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 746400572,
+  "bounds": {
+    "minlat": -3.9630171,
+    "minlon": -47.5421898,
+    "maxlat": -3.9627177,
+    "maxlon": -47.5421387
+  },
+  "nodes": [
+    6985055606,
+    6985055596
+  ],
+  "geometry": [
+    { "lat": -3.9627177, "lon": -47.5421387 },
+    { "lat": -3.9630171, "lon": -47.5421898 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Rodovia Bernardo Sayão",
+    "ref": "BR-010",
+    "source": "Uploaded GPX traces"
+  }
+},
+{
+  "type": "way",
+  "id": 753731629,
+  "bounds": {
+    "minlat": -2.8608820,
+    "minlon": -48.2453031,
+    "maxlat": -2.8607859,
+    "maxlon": -48.2451785
+  },
+  "nodes": [
+    7042215042,
+    5788199662
+  ],
+  "geometry": [
+    { "lat": -2.8607859, "lon": -48.2451785 },
+    { "lat": -2.8608820, "lon": -48.2453031 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada da Concren"
+  }
+},
+{
+  "type": "way",
+  "id": 756422095,
+  "bounds": {
+    "minlat": -2.5649165,
+    "minlon": -48.3984574,
+    "maxlat": -2.5647671,
+    "maxlon": -48.3984400
+  },
+  "nodes": [
+    7065324073,
+    7065324072
+  ],
+  "geometry": [
+    { "lat": -2.5647671, "lon": -48.3984400 },
+    { "lat": -2.5649165, "lon": -48.3984574 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 756423446,
+  "bounds": {
+    "minlat": -2.6733176,
+    "minlon": -48.5660426,
+    "maxlat": -2.6733023,
+    "maxlon": -48.5658969
+  },
+  "nodes": [
+    7065342309,
+    7065342308
+  ],
+  "geometry": [
+    { "lat": -2.6733176, "lon": -48.5660426 },
+    { "lat": -2.6733023, "lon": -48.5658969 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 756449523,
+  "bounds": {
+    "minlat": -3.4962341,
+    "minlon": -48.9627573,
+    "maxlat": -3.4961581,
+    "maxlon": -48.9627420
+  },
+  "nodes": [
+    7065518437,
+    7065538585
+  ],
+  "geometry": [
+    { "lat": -3.4961581, "lon": -48.9627420 },
+    { "lat": -3.4962341, "lon": -48.9627573 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "trunk",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "80",
+    "ref": "PA-150;PA-475",
+    "source": "landsat; survey",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 756452582,
+  "bounds": {
+    "minlat": -2.4934962,
+    "minlon": -48.3359204,
+    "maxlat": -2.4933054,
+    "maxlon": -48.3356565
+  },
+  "nodes": [
+    7065563331,
+    7065563332
+  ],
+  "geometry": [
+    { "lat": -2.4934962, "lon": -48.3359204 },
+    { "lat": -2.4933054, "lon": -48.3356565 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-256",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 756476448,
+  "bounds": {
+    "minlat": -3.6319624,
+    "minlon": -49.0640833,
+    "maxlat": -3.6317528,
+    "maxlon": -49.0640303
+  },
+  "nodes": [
+    7065765098,
+    7065641925
+  ],
+  "geometry": [
+    { "lat": -3.6317528, "lon": -49.0640303 },
+    { "lat": -3.6319624, "lon": -49.0640833 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "trunk",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "80",
+    "ref": "PA-150;PA-475",
+    "source": "landsat; survey",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 756490478,
+  "bounds": {
+    "minlat": -3.3966732,
+    "minlon": -48.9961272,
+    "maxlat": -3.3965310,
+    "maxlon": -48.9960381
+  },
+  "nodes": [
+    7065870816,
+    7065870811
+  ],
+  "geometry": [
+    { "lat": -3.3966732, "lon": -48.9960381 },
+    { "lat": -3.3965310, "lon": -48.9961272 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 756792473,
+  "bounds": {
+    "minlat": -2.5449352,
+    "minlon": -48.2702103,
+    "maxlat": -2.5447436,
+    "maxlon": -48.2700795
+  },
+  "nodes": [
+    7068355095,
+    7068355094
+  ],
+  "geometry": [
+    { "lat": -2.5447436, "lon": -48.2700795 },
+    { "lat": -2.5449352, "lon": -48.2702103 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 756792483,
+  "bounds": {
+    "minlat": -2.5012194,
+    "minlon": -48.2817256,
+    "maxlat": -2.5011068,
+    "maxlon": -48.2815634
+  },
+  "nodes": [
+    7068355421,
+    7068355420
+  ],
+  "geometry": [
+    { "lat": -2.5012194, "lon": -48.2815634 },
+    { "lat": -2.5011068, "lon": -48.2817256 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 756797221,
+  "bounds": {
+    "minlat": -2.6554999,
+    "minlon": -48.3682108,
+    "maxlat": -2.6554992,
+    "maxlon": -48.3681317
+  },
+  "nodes": [
+    7068235706,
+    7068235705
+  ],
+  "geometry": [
+    { "lat": -2.6554992, "lon": -48.3681317 },
+    { "lat": -2.6554999, "lon": -48.3682108 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 756805172,
+  "bounds": {
+    "minlat": -2.8698920,
+    "minlon": -48.1579994,
+    "maxlat": -2.8697527,
+    "maxlon": -48.1574482
+  },
+  "nodes": [
+    7068460248,
+    7068513329
+  ],
+  "geometry": [
+    { "lat": -2.8697527, "lon": -48.1579994 },
+    { "lat": -2.8698920, "lon": -48.1574482 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-256",
+    "source": "IBGE"
+  }
+},
+{
+  "type": "way",
+  "id": 756809110,
+  "bounds": {
+    "minlat": -2.8758103,
+    "minlon": -48.1315635,
+    "maxlat": -2.8757868,
+    "maxlon": -48.1314100
+  },
+  "nodes": [
+    7068574091,
+    7068574090
+  ],
+  "geometry": [
+    { "lat": -2.8757868, "lon": -48.1315635 },
+    { "lat": -2.8758103, "lon": -48.1314100 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-256",
+    "source": "IBGE"
+  }
+},
+{
+  "type": "way",
+  "id": 756818831,
+  "bounds": {
+    "minlat": -2.5901915,
+    "minlon": -48.3486360,
+    "maxlat": -2.5897025,
+    "maxlon": -48.3485582
+  },
+  "nodes": [
+    7068671641,
+    7068671642
+  ],
+  "geometry": [
+    { "lat": -2.5897025, "lon": -48.3486360 },
+    { "lat": -2.5901915, "lon": -48.3485582 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "oneway": "yes",
+    "ref": "PA-256",
+    "source": "IBGE",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 756818837,
+  "bounds": {
+    "minlat": -2.5901768,
+    "minlon": -48.3485757,
+    "maxlat": -2.5896953,
+    "maxlon": -48.3484979
+  },
+  "nodes": [
+    7068671677,
+    7068678392
+  ],
+  "geometry": [
+    { "lat": -2.5901768, "lon": -48.3484979 },
+    { "lat": -2.5896953, "lon": -48.3485757 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "oneway": "yes",
+    "ref": "PA-256",
+    "source": "IBGE",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 756845063,
+  "bounds": {
+    "minlat": -2.9243704,
+    "minlon": -47.9891932,
+    "maxlat": -2.9242639,
+    "maxlon": -47.9890899
+  },
+  "nodes": [
+    7068883122,
+    7068883121
+  ],
+  "geometry": [
+    { "lat": -2.9242639, "lon": -47.9891932 },
+    { "lat": -2.9243704, "lon": -47.9890899 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-256",
+    "source": "IBGE"
+  }
+},
+{
+  "type": "way",
+  "id": 756847176,
+  "bounds": {
+    "minlat": -2.8846752,
+    "minlon": -48.0298977,
+    "maxlat": -2.8845566,
+    "maxlon": -48.0297764
+  },
+  "nodes": [
+    7068916047,
+    7068916046
+  ],
+  "geometry": [
+    { "lat": -2.8845566, "lon": -48.0298977 },
+    { "lat": -2.8846752, "lon": -48.0297764 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-256",
+    "source": "IBGE",
+    "surface": "paved"
+  }
+},
+{
+  "type": "way",
+  "id": 756856431,
+  "bounds": {
+    "minlat": -2.1031492,
+    "minlon": -47.9356563,
+    "maxlat": -2.1030701,
+    "maxlon": -47.9354726
+  },
+  "nodes": [
+    7068740796,
+    7068740795
+  ],
+  "geometry": [
+    { "lat": -2.1030701, "lon": -47.9356563 },
+    { "lat": -2.1031492, "lon": -47.9354726 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 756862289,
+  "bounds": {
+    "minlat": -2.3876575,
+    "minlon": -48.3559625,
+    "maxlat": -2.3875208,
+    "maxlon": -48.3553939
+  },
+  "nodes": [
+    7069064177,
+    7069064176
+  ],
+  "geometry": [
+    { "lat": -2.3876575, "lon": -48.3553939 },
+    { "lat": -2.3875208, "lon": -48.3559625 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 756871856,
+  "bounds": {
+    "minlat": -2.9059461,
+    "minlon": -48.0754584,
+    "maxlat": -2.9058577,
+    "maxlon": -48.0753900
+  },
+  "nodes": [
+    7069119557,
+    7069119556
+  ],
+  "geometry": [
+    { "lat": -2.9059461, "lon": -48.0753900 },
+    { "lat": -2.9058577, "lon": -48.0754584 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 757111106,
+  "bounds": {
+    "minlat": -2.1483053,
+    "minlon": -48.0213583,
+    "maxlat": -2.1481786,
+    "maxlon": -48.0213381
+  },
+  "nodes": [
+    7070926906,
+    7070926912
+  ],
+  "geometry": [
+    { "lat": -2.1483053, "lon": -48.0213583 },
+    { "lat": -2.1481786, "lon": -48.0213381 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "ref": "PA-140",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 757118555,
+  "bounds": {
+    "minlat": -2.8425674,
+    "minlon": -48.2502876,
+    "maxlat": -2.8424870,
+    "maxlon": -48.2501173
+  },
+  "nodes": [
+    7071024317,
+    7071024318
+  ],
+  "geometry": [
+    { "lat": -2.8424870, "lon": -48.2502876 },
+    { "lat": -2.8425674, "lon": -48.2501173 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-256",
+    "source": "IBGE"
+  }
+},
+{
+  "type": "way",
+  "id": 757241688,
+  "bounds": {
+    "minlat": -2.9730269,
+    "minlon": -47.5907806,
+    "maxlat": -2.9730041,
+    "maxlon": -47.5905365
+  },
+  "nodes": [
+    7071626240,
+    7071626239
+  ],
+  "geometry": [
+    { "lat": -2.9730041, "lon": -47.5907806 },
+    { "lat": -2.9730269, "lon": -47.5905365 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "estadual",
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-256",
+    "source": "IBGE",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 757250133,
+  "bounds": {
+    "minlat": -2.3178703,
+    "minlon": -48.1091503,
+    "maxlat": -2.3178469,
+    "maxlon": -48.1090249
+  },
+  "nodes": [
+    7071690204,
+    7071690203
+  ],
+  "geometry": [
+    { "lat": -2.3178703, "lon": -48.1090249 },
+    { "lat": -2.3178469, "lon": -48.1091503 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 757250136,
+  "bounds": {
+    "minlat": -2.3236002,
+    "minlon": -48.1076965,
+    "maxlat": -2.3233208,
+    "maxlon": -48.1075658
+  },
+  "nodes": [
+    7071690238,
+    7071690239
+  ],
+  "geometry": [
+    { "lat": -2.3236002, "lon": -48.1076965 },
+    { "lat": -2.3233208, "lon": -48.1075658 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "ref": "PA-140",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 757250820,
+  "bounds": {
+    "minlat": -2.8663158,
+    "minlon": -48.9647609,
+    "maxlat": -2.8659943,
+    "maxlon": -48.9647448
+  },
+  "nodes": [
+    7071689589,
+    7071682862
+  ],
+  "geometry": [
+    { "lat": -2.8659943, "lon": -48.9647448 },
+    { "lat": -2.8663158, "lon": -48.9647609 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "maxspeed": "80",
+    "ref": "PA-150;PA-475",
+    "source": "survey",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 757494060,
+  "bounds": {
+    "minlat": -3.7867857,
+    "minlon": -47.9992273,
+    "maxlat": -3.7866332,
+    "maxlon": -47.9990396
+  },
+  "nodes": [
+    7074178929,
+    7074178931
+  ],
+  "geometry": [
+    { "lat": -3.7867857, "lon": -47.9990396 },
+    { "lat": -3.7866332, "lon": -47.9992273 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "source": "digitalglobe",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 758013868,
+  "bounds": {
+    "minlat": -3.3769198,
+    "minlon": -48.3580855,
+    "maxlat": -3.3769185,
+    "maxlon": -48.3579285
+  },
+  "nodes": [
+    7078999713,
+    7078999714
+  ],
+  "geometry": [
+    { "lat": -3.3769185, "lon": -48.3579285 },
+    { "lat": -3.3769198, "lon": -48.3580855 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758017645,
+  "bounds": {
+    "minlat": -2.7036338,
+    "minlon": -48.8167512,
+    "maxlat": -2.7031167,
+    "maxlon": -48.8166748
+  },
+  "nodes": [
+    7079038207,
+    7079038268
+  ],
+  "geometry": [
+    { "lat": -2.7031167, "lon": -48.8167512 },
+    { "lat": -2.7036338, "lon": -48.8166748 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758020080,
+  "bounds": {
+    "minlat": -3.3834577,
+    "minlon": -48.5236643,
+    "maxlat": -3.3833700,
+    "maxlon": -48.5236629
+  },
+  "nodes": [
+    7079065205,
+    7079065204
+  ],
+  "geometry": [
+    { "lat": -3.3834577, "lon": -48.5236643 },
+    { "lat": -3.3833700, "lon": -48.5236629 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758025241,
+  "bounds": {
+    "minlat": -2.7243614,
+    "minlon": -48.8547622,
+    "maxlat": -2.7239434,
+    "maxlon": -48.8545664
+  },
+  "nodes": [
+    7079111738,
+    7079111739
+  ],
+  "geometry": [
+    { "lat": -2.7239434, "lon": -48.8545664 },
+    { "lat": -2.7243614, "lon": -48.8547622 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758043920,
+  "bounds": {
+    "minlat": -2.4420747,
+    "minlon": -48.7849630,
+    "maxlat": -2.4419816,
+    "maxlon": -48.7848759
+  },
+  "nodes": [
+    7079234075,
+    7079234076
+  ],
+  "geometry": [
+    { "lat": -2.4419816, "lon": -48.7849630 },
+    { "lat": -2.4420747, "lon": -48.7848759 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 758057649,
+  "bounds": {
+    "minlat": -2.5872757,
+    "minlon": -46.8874835,
+    "maxlat": -2.5871281,
+    "maxlon": -46.8874063
+  },
+  "nodes": [
+    4729381118,
+    7079166810
+  ],
+  "geometry": [
+    { "lat": -2.5871281, "lon": -46.8874835 },
+    { "lat": -2.5872757, "lon": -46.8874063 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758259957,
+  "bounds": {
+    "minlat": -2.1028382,
+    "minlon": -48.7817766,
+    "maxlat": -2.1027203,
+    "maxlon": -48.7812575
+  },
+  "nodes": [
+    3998337939,
+    3998337941
+  ],
+  "geometry": [
+    { "lat": -2.1027203, "lon": -48.7817766 },
+    { "lat": -2.1028382, "lon": -48.7812575 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "ref": "PA-252",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 758260616,
+  "bounds": {
+    "minlat": -3.3468330,
+    "minlon": -47.2314752,
+    "maxlat": -3.3468036,
+    "maxlon": -47.2313458
+  },
+  "nodes": [
+    7081451597,
+    7079263795
+  ],
+  "geometry": [
+    { "lat": -3.3468036, "lon": -47.2313458 },
+    { "lat": -3.3468330, "lon": -47.2314752 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "surface": "gravel"
+  }
+},
+{
+  "type": "way",
+  "id": 758263742,
+  "bounds": {
+    "minlat": -2.4527687,
+    "minlon": -48.0763170,
+    "maxlat": -2.4526782,
+    "maxlon": -48.0762604
+  },
+  "nodes": [
+    7081494394,
+    7081494393
+  ],
+  "geometry": [
+    { "lat": -2.4526782, "lon": -48.0763170 },
+    { "lat": -2.4527687, "lon": -48.0762604 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758275962,
+  "bounds": {
+    "minlat": -2.4143040,
+    "minlon": -48.0918698,
+    "maxlat": -2.4141774,
+    "maxlon": -48.0918474
+  },
+  "nodes": [
+    7081614919,
+    2545105400
+  ],
+  "geometry": [
+    { "lat": -2.4141774, "lon": -48.0918698 },
+    { "lat": -2.4143040, "lon": -48.0918474 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 758298028,
+  "bounds": {
+    "minlat": -2.4782505,
+    "minlon": -48.0132848,
+    "maxlat": -2.4781474,
+    "maxlon": -48.0130796
+  },
+  "nodes": [
+    7081793485,
+    7081788284
+  ],
+  "geometry": [
+    { "lat": -2.4782505, "lon": -48.0132848 },
+    { "lat": -2.4781474, "lon": -48.0130796 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758620763,
+  "bounds": {
+    "minlat": -2.3650277,
+    "minlon": -48.0690868,
+    "maxlat": -2.3648750,
+    "maxlon": -48.0690426
+  },
+  "nodes": [
+    7085334274,
+    7085334273
+  ],
+  "geometry": [
+    { "lat": -2.3650277, "lon": -48.0690868 },
+    { "lat": -2.3648750, "lon": -48.0690426 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758620765,
+  "bounds": {
+    "minlat": -2.3771610,
+    "minlon": -48.0877235,
+    "maxlat": -2.3770934,
+    "maxlon": -48.0875961
+  },
+  "nodes": [
+    7085334504,
+    7085334505
+  ],
+  "geometry": [
+    { "lat": -2.3770934, "lon": -48.0875961 },
+    { "lat": -2.3771610, "lon": -48.0877235 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758626898,
+  "bounds": {
+    "minlat": -3.5212524,
+    "minlon": -47.4535286,
+    "maxlat": -3.5211835,
+    "maxlon": -47.4534675
+  },
+  "nodes": [
+    7085398125,
+    7085398124
+  ],
+  "geometry": [
+    { "lat": -3.5212524, "lon": -47.4535286 },
+    { "lat": -3.5211835, "lon": -47.4534675 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758626900,
+  "bounds": {
+    "minlat": -3.5339460,
+    "minlon": -47.4890343,
+    "maxlat": -3.5337680,
+    "maxlon": -47.4889813
+  },
+  "nodes": [
+    7085398179,
+    7085398178
+  ],
+  "geometry": [
+    { "lat": -3.5339460, "lon": -47.4890343 },
+    { "lat": -3.5337680, "lon": -47.4889813 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "federal",
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Rodovia Bernardo Sayão",
+    "ref": "BR-010",
+    "source": "IBGE,survey"
+  }
+},
+{
+  "type": "way",
+  "id": 758658130,
+  "bounds": {
+    "minlat": -3.5498131,
+    "minlon": -49.0502362,
+    "maxlat": -3.5496518,
+    "maxlon": -49.0501450
+  },
+  "nodes": [
+    7085612412,
+    7085612413
+  ],
+  "geometry": [
+    { "lat": -3.5498131, "lon": -49.0501450 },
+    { "lat": -3.5496518, "lon": -49.0502362 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758833406,
+  "bounds": {
+    "minlat": -3.0257498,
+    "minlon": -48.8554287,
+    "maxlat": -3.0257324,
+    "maxlon": -48.8553107
+  },
+  "nodes": [
+    7087270572,
+    7087270620
+  ],
+  "geometry": [
+    { "lat": -3.0257498, "lon": -48.8554287 },
+    { "lat": -3.0257324, "lon": -48.8553107 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "service",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758838274,
+  "bounds": {
+    "minlat": -2.2126987,
+    "minlon": -48.0536641,
+    "maxlat": -2.2126116,
+    "maxlon": -48.0535877
+  },
+  "nodes": [
+    7087316632,
+    7087316633
+  ],
+  "geometry": [
+    { "lat": -2.2126987, "lon": -48.0536641 },
+    { "lat": -2.2126116, "lon": -48.0535877 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "ref": "PA-140",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 758838276,
+  "bounds": {
+    "minlat": -2.1901017,
+    "minlon": -48.0414668,
+    "maxlat": -2.1900240,
+    "maxlon": -48.0414172
+  },
+  "nodes": [
+    7087316670,
+    7087316671
+  ],
+  "geometry": [
+    { "lat": -2.1901017, "lon": -48.0414668 },
+    { "lat": -2.1900240, "lon": -48.0414172 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "layer": "1",
+    "ref": "PA-140",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 758839203,
+  "bounds": {
+    "minlat": -2.2876709,
+    "minlon": -47.5636587,
+    "maxlat": -2.2873366,
+    "maxlon": -47.5636527
+  },
+  "nodes": [
+    7087310830,
+    7087310831
+  ],
+  "geometry": [
+    { "lat": -2.2876709, "lon": -47.5636587 },
+    { "lat": -2.2873366, "lon": -47.5636527 }
+  ],
+  "tags": {
+    "IBGE:CD_ADMINIS": "federal",
+    "bridge": "yes",
+    "highway": "trunk",
+    "layer": "1",
+    "lit": "no",
+    "maxspeed": "100",
+    "name": "Belém-Brasília",
+    "ref": "BR-010",
+    "source": "IBGE;survey",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 758839691,
+  "bounds": {
+    "minlat": -2.1738841,
+    "minlon": -48.0703736,
+    "maxlat": -2.1738311,
+    "maxlon": -48.0702563
+  },
+  "nodes": [
+    7087336141,
+    7087336142
+  ],
+  "geometry": [
+    { "lat": -2.1738311, "lon": -48.0702563 },
+    { "lat": -2.1738841, "lon": -48.0703736 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758842488,
+  "bounds": {
+    "minlat": -2.4928762,
+    "minlon": -47.5837263,
+    "maxlat": -2.4925346,
+    "maxlon": -47.5837076
+  },
+  "nodes": [
+    7087366504,
+    7087366503
+  ],
+  "geometry": [
+    { "lat": -2.4925346, "lon": -47.5837263 },
+    { "lat": -2.4928762, "lon": -47.5837076 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758843163,
+  "bounds": {
+    "minlat": -2.4361196,
+    "minlon": -47.9700691,
+    "maxlat": -2.4359963,
+    "maxlon": -47.9699497
+  },
+  "nodes": [
+    7087372761,
+    7087372760
+  ],
+  "geometry": [
+    { "lat": -2.4361196, "lon": -47.9700691 },
+    { "lat": -2.4359963, "lon": -47.9699497 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758843193,
+  "bounds": {
+    "minlat": -2.2253512,
+    "minlon": -48.0691968,
+    "maxlat": -2.2253251,
+    "maxlon": -48.0691291
+  },
+  "nodes": [
+    7087375340,
+    7087375341
+  ],
+  "geometry": [
+    { "lat": -2.2253512, "lon": -48.0691291 },
+    { "lat": -2.2253251, "lon": -48.0691968 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758843321,
+  "bounds": {
+    "minlat": -3.0751430,
+    "minlon": -48.6863785,
+    "maxlat": -3.0748618,
+    "maxlon": -48.6859527
+  },
+  "nodes": [
+    7087374349,
+    7087374350
+  ],
+  "geometry": [
+    { "lat": -3.0748618, "lon": -48.6863785 },
+    { "lat": -3.0751430, "lon": -48.6859527 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758858179,
+  "bounds": {
+    "minlat": -3.0782975,
+    "minlon": -48.6292555,
+    "maxlat": -3.0780986,
+    "maxlon": -48.6291146
+  },
+  "nodes": [
+    7087230597,
+    7087507327
+  ],
+  "geometry": [
+    { "lat": -3.0780986, "lon": -48.6292555 },
+    { "lat": -3.0782975, "lon": -48.6291146 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758867332,
+  "bounds": {
+    "minlat": -2.9455990,
+    "minlon": -48.6407769,
+    "maxlat": -2.9452642,
+    "maxlon": -48.6398488
+  },
+  "nodes": [
+    7087618637,
+    6762916435
+  ],
+  "geometry": [
+    { "lat": -2.9455990, "lon": -48.6407769 },
+    { "lat": -2.9452642, "lon": -48.6398488 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 758888249,
+  "bounds": {
+    "minlat": -2.9674032,
+    "minlon": -48.3808279,
+    "maxlat": -2.9671380,
+    "maxlon": -48.3807636
+  },
+  "nodes": [
+    7087670158,
+    7087670296
+  ],
+  "geometry": [
+    { "lat": -2.9671380, "lon": -48.3808279 },
+    { "lat": -2.9674032, "lon": -48.3807636 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 759492386,
+  "bounds": {
+    "minlat": -2.3228880,
+    "minlon": -47.5080358,
+    "maxlat": -2.3228525,
+    "maxlon": -47.5079378
+  },
+  "nodes": [
+    7094772299,
+    7094626043
+  ],
+  "geometry": [
+    { "lat": -2.3228880, "lon": -47.5079378 },
+    { "lat": -2.3228525, "lon": -47.5080358 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 759492387,
+  "bounds": {
+    "minlat": -2.3292644,
+    "minlon": -47.5044074,
+    "maxlat": -2.3291799,
+    "maxlon": -47.5043584
+  },
+  "nodes": [
+    7094705189,
+    7094772302
+  ],
+  "geometry": [
+    { "lat": -2.3291799, "lon": -47.5043584 },
+    { "lat": -2.3292644, "lon": -47.5044074 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 759495166,
+  "bounds": {
+    "minlat": -2.6754443,
+    "minlon": -48.5866469,
+    "maxlat": -2.6751452,
+    "maxlon": -48.5861322
+  },
+  "nodes": [
+    7094800208,
+    7094800207
+  ],
+  "geometry": [
+    { "lat": -2.6751452, "lon": -48.5861322 },
+    { "lat": -2.6754443, "lon": -48.5866469 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 759525216,
+  "bounds": {
+    "minlat": -2.5449707,
+    "minlon": -47.5735822,
+    "maxlat": -2.5449452,
+    "maxlon": -47.5732483
+  },
+  "nodes": [
+    7094986626,
+    7094986625
+  ],
+  "geometry": [
+    { "lat": -2.5449452, "lon": -47.5735822 },
+    { "lat": -2.5449707, "lon": -47.5732483 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 759539359,
+  "bounds": {
+    "minlat": -2.4373791,
+    "minlon": -48.8399979,
+    "maxlat": -2.4373121,
+    "maxlon": -48.8398706
+  },
+  "nodes": [
+    7094877889,
+    7094877888
+  ],
+  "geometry": [
+    { "lat": -2.4373121, "lon": -48.8399979 },
+    { "lat": -2.4373791, "lon": -48.8398706 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 759540221,
+  "bounds": {
+    "minlat": -2.5617165,
+    "minlon": -47.5768626,
+    "maxlat": -2.5616375,
+    "maxlon": -47.5768170
+  },
+  "nodes": [
+    7095222391,
+    7095222390
+  ],
+  "geometry": [
+    { "lat": -2.5616375, "lon": -47.5768170 },
+    { "lat": -2.5617165, "lon": -47.5768626 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 759743491,
+  "bounds": {
+    "minlat": -2.3400714,
+    "minlon": -48.3403038,
+    "maxlat": -2.3399495,
+    "maxlon": -48.3397646
+  },
+  "nodes": [
+    7097155945,
+    7097155944
+  ],
+  "geometry": [
+    { "lat": -2.3400714, "lon": -48.3397646 },
+    { "lat": -2.3399495, "lon": -48.3403038 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 759749931,
+  "bounds": {
+    "minlat": -2.2996428,
+    "minlon": -48.8603438,
+    "maxlat": -2.2995945,
+    "maxlon": -48.8601715
+  },
+  "nodes": [
+    7097209811,
+    7097209802
+  ],
+  "geometry": [
+    { "lat": -2.2996428, "lon": -48.8603438 },
+    { "lat": -2.2995945, "lon": -48.8601715 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 759762482,
+  "bounds": {
+    "minlat": -2.3335028,
+    "minlon": -48.3807314,
+    "maxlat": -2.3333312,
+    "maxlon": -48.3804041
+  },
+  "nodes": [
+    7097265344,
+    7097265343
+  ],
+  "geometry": [
+    { "lat": -2.3335028, "lon": -48.3804041 },
+    { "lat": -2.3333312, "lon": -48.3807314 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 759770722,
+  "bounds": {
+    "minlat": -2.3931151,
+    "minlon": -48.9258112,
+    "maxlat": -2.3928833,
+    "maxlon": -48.9257026
+  },
+  "nodes": [
+    7097431151,
+    7097431150
+  ],
+  "geometry": [
+    { "lat": -2.3928833, "lon": -48.9257026 },
+    { "lat": -2.3931151, "lon": -48.9258112 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 760088911,
+  "bounds": {
+    "minlat": -2.2978518,
+    "minlon": -48.2875675,
+    "maxlat": -2.2969996,
+    "maxlon": -48.2872000
+  },
+  "nodes": [
+    7100441907,
+    7100441906
+  ],
+  "geometry": [
+    { "lat": -2.2978518, "lon": -48.2872000 },
+    { "lat": -2.2969996, "lon": -48.2875675 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 760097618,
+  "bounds": {
+    "minlat": -2.8621890,
+    "minlon": -47.5481240,
+    "maxlat": -2.8621863,
+    "maxlon": -47.5479859
+  },
+  "nodes": [
+    7100455886,
+    7100455885
+  ],
+  "geometry": [
+    { "lat": -2.8621863, "lon": -47.5479859 },
+    { "lat": -2.8621890, "lon": -47.5481240 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 760103895,
+  "bounds": {
+    "minlat": -2.8254558,
+    "minlon": -47.5845739,
+    "maxlat": -2.8252161,
+    "maxlon": -47.5845163
+  },
+  "nodes": [
+    7100477010,
+    7100477009
+  ],
+  "geometry": [
+    { "lat": -2.8254558, "lon": -47.5845739 },
+    { "lat": -2.8252161, "lon": -47.5845163 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 760103897,
+  "bounds": {
+    "minlat": -2.8405918,
+    "minlon": -47.5671704,
+    "maxlat": -2.8404619,
+    "maxlon": -47.5671557
+  },
+  "nodes": [
+    7100631590,
+    7100573076
+  ],
+  "geometry": [
+    { "lat": -2.8405918, "lon": -47.5671557 },
+    { "lat": -2.8404619, "lon": -47.5671704 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 760812751,
+  "bounds": {
+    "minlat": -2.4881892,
+    "minlon": -47.1701682,
+    "maxlat": -2.4877592,
+    "maxlon": -47.1701280
+  },
+  "nodes": [
+    4742270832,
+    7107824926
+  ],
+  "geometry": [
+    { "lat": -2.4877592, "lon": -47.1701280 },
+    { "lat": -2.4881892, "lon": -47.1701682 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 760812755,
+  "bounds": {
+    "minlat": -2.4399709,
+    "minlon": -47.1406385,
+    "maxlat": -2.4398297,
+    "maxlon": -47.1405275
+  },
+  "nodes": [
+    7107824977,
+    7107824978
+  ],
+  "geometry": [
+    { "lat": -2.4398297, "lon": -47.1406385 },
+    { "lat": -2.4399709, "lon": -47.1405275 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 761132760,
+  "bounds": {
+    "minlat": -2.5453351,
+    "minlon": -48.7017301,
+    "maxlat": -2.5445473,
+    "maxlon": -48.7013224
+  },
+  "nodes": [
+    7111244120,
+    7111244119
+  ],
+  "geometry": [
+    { "lat": -2.5445473, "lon": -48.7017301 },
+    { "lat": -2.5453351, "lon": -48.7013224 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 761166995,
+  "bounds": {
+    "minlat": -2.9270110,
+    "minlon": -47.2714713,
+    "maxlat": -2.9268753,
+    "maxlon": -47.2714374
+  },
+  "nodes": [
+    7111365060,
+    7111365061
+  ],
+  "geometry": [
+    { "lat": -2.9270110, "lon": -47.2714374 },
+    { "lat": -2.9268753, "lon": -47.2714713 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 761169409,
+  "bounds": {
+    "minlat": -2.2368338,
+    "minlon": -47.6763189,
+    "maxlat": -2.2366917,
+    "maxlon": -47.6761606
+  },
+  "nodes": [
+    7111587767,
+    7111587765
+  ],
+  "geometry": [
+    { "lat": -2.2368338, "lon": -47.6763189 },
+    { "lat": -2.2366917, "lon": -47.6761606 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 761367460,
+  "bounds": {
+    "minlat": -2.3080916,
+    "minlon": -48.1426223,
+    "maxlat": -2.3079643,
+    "maxlon": -48.1424680
+  },
+  "nodes": [
+    7113407843,
+    7113407842
+  ],
+  "geometry": [
+    { "lat": -2.3079643, "lon": -48.1424680 },
+    { "lat": -2.3080916, "lon": -48.1426223 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 761601269,
+  "bounds": {
+    "minlat": -2.9064681,
+    "minlon": -48.7626538,
+    "maxlat": -2.9063683,
+    "maxlon": -48.7626528
+  },
+  "nodes": [
+    7115722187,
+    7115722188
+  ],
+  "geometry": [
+    { "lat": -2.9064681, "lon": -48.7626528 },
+    { "lat": -2.9063683, "lon": -48.7626538 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 761619084,
+  "bounds": {
+    "minlat": -3.7811807,
+    "minlon": -48.1090484,
+    "maxlat": -3.7809272,
+    "maxlon": -48.1090470
+  },
+  "nodes": [
+    7115922363,
+    7115922187
+  ],
+  "geometry": [
+    { "lat": -3.7811807, "lon": -48.1090484 },
+    { "lat": -3.7809272, "lon": -48.1090470 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 761838351,
+  "bounds": {
+    "minlat": -3.9758972,
+    "minlon": -48.3892822,
+    "maxlat": -3.9758036,
+    "maxlon": -48.3892769
+  },
+  "nodes": [
+    7118028008,
+    7118028009
+  ],
+  "geometry": [
+    { "lat": -3.9758972, "lon": -48.3892822 },
+    { "lat": -3.9758036, "lon": -48.3892769 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified"
+  }
+},
+{
+  "type": "way",
+  "id": 761915527,
+  "bounds": {
+    "minlat": -3.0824449,
+    "minlon": -47.6657148,
+    "maxlat": -3.0819708,
+    "maxlon": -47.6655170
+  },
+  "nodes": [
+    7118399787,
+    7118369680
+  ],
+  "geometry": [
+    { "lat": -3.0819708, "lon": -47.6655170 },
+    { "lat": -3.0824449, "lon": -47.6657148 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 762132867,
+  "bounds": {
+    "minlat": -3.5910592,
+    "minlon": -48.9884019,
+    "maxlat": -3.5909446,
+    "maxlon": -48.9883191
+  },
+  "nodes": [
+    7120645379,
+    7120645373
+  ],
+  "geometry": [
+    { "lat": -3.5909446, "lon": -48.9884019 },
+    { "lat": -3.5910592, "lon": -48.9883191 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 762132870,
+  "bounds": {
+    "minlat": -3.6227514,
+    "minlon": -48.9685240,
+    "maxlat": -3.6227381,
+    "maxlon": -48.9683792
+  },
+  "nodes": [
+    7120660278,
+    7120660279
+  ],
+  "geometry": [
+    { "lat": -3.6227381, "lon": -48.9683792 },
+    { "lat": -3.6227514, "lon": -48.9685240 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 762177846,
+  "bounds": {
+    "minlat": -2.6167428,
+    "minlon": -48.1342729,
+    "maxlat": -2.6167334,
+    "maxlon": -48.1341941
+  },
+  "nodes": [
+    7121550525,
+    7121549651
+  ],
+  "geometry": [
+    { "lat": -2.6167428, "lon": -48.1341941 },
+    { "lat": -2.6167334, "lon": -48.1342729 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 762795685,
+  "bounds": {
+    "minlat": -2.9017632,
+    "minlon": -48.8215135,
+    "maxlat": -2.9016399,
+    "maxlon": -48.8214840
+  },
+  "nodes": [
+    7127817250,
+    7127817249
+  ],
+  "geometry": [
+    { "lat": -2.9017632, "lon": -48.8215135 },
+    { "lat": -2.9016399, "lon": -48.8214840 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 763045589,
+  "bounds": {
+    "minlat": -3.4604986,
+    "minlon": -47.8467069,
+    "maxlat": -3.4604960,
+    "maxlon": -47.8465198
+  },
+  "nodes": [
+    7130409534,
+    7130409535
+  ],
+  "geometry": [
+    { "lat": -3.4604960, "lon": -47.8467069 },
+    { "lat": -3.4604986, "lon": -47.8465198 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 764070095,
+  "bounds": {
+    "minlat": -3.0374306,
+    "minlon": -48.3710915,
+    "maxlat": -3.0372690,
+    "maxlon": -48.3710652
+  },
+  "nodes": [
+    7138269051,
+    7138269069
+  ],
+  "geometry": [
+    { "lat": -3.0372690, "lon": -48.3710652 },
+    { "lat": -3.0374306, "lon": -48.3710915 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 764107619,
+  "bounds": {
+    "minlat": -4.0135817,
+    "minlon": -48.0309377,
+    "maxlat": -4.0134371,
+    "maxlon": -48.0307889
+  },
+  "nodes": [
+    7138611330,
+    7138438681
+  ],
+  "geometry": [
+    { "lat": -4.0135817, "lon": -48.0307889 },
+    { "lat": -4.0134371, "lon": -48.0309377 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "source": "digitalglobe",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 764841146,
+  "bounds": {
+    "minlat": -3.4918776,
+    "minlon": -47.3912457,
+    "maxlat": -3.4917973,
+    "maxlon": -47.3911357
+  },
+  "nodes": [
+    7144498213,
+    7144498215
+  ],
+  "geometry": [
+    { "lat": -3.4918776, "lon": -47.3911357 },
+    { "lat": -3.4917973, "lon": -47.3912457 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 765864159,
+  "bounds": {
+    "minlat": -2.9290334,
+    "minlon": -47.0529205,
+    "maxlat": -2.9286771,
+    "maxlon": -47.0525638
+  },
+  "nodes": [
+    7152828889,
+    7152828686
+  ],
+  "geometry": [
+    { "lat": -2.9290334, "lon": -47.0525638 },
+    { "lat": -2.9286771, "lon": -47.0529205 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 766853770,
+  "bounds": {
+    "minlat": -2.1644381,
+    "minlon": -47.1894993,
+    "maxlat": -2.1643014,
+    "maxlon": -47.1891332
+  },
+  "nodes": [
+    7162046791,
+    7162046790
+  ],
+  "geometry": [
+    { "lat": -2.1644381, "lon": -47.1894993 },
+    { "lat": -2.1643014, "lon": -47.1891332 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 767744687,
+  "bounds": {
+    "minlat": -3.0909485,
+    "minlon": -47.1158338,
+    "maxlat": -3.0909331,
+    "maxlon": -47.1156447
+  },
+  "nodes": [
+    7168211125,
+    7168211127
+  ],
+  "geometry": [
+    { "lat": -3.0909331, "lon": -47.1156447 },
+    { "lat": -3.0909485, "lon": -47.1158338 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 767763929,
+  "bounds": {
+    "minlat": -2.3673737,
+    "minlon": -47.0066907,
+    "maxlat": -2.3672936,
+    "maxlon": -47.0066491
+  },
+  "nodes": [
+    7168405519,
+    7168405518
+  ],
+  "geometry": [
+    { "lat": -2.3672936, "lon": -47.0066491 },
+    { "lat": -2.3673737, "lon": -47.0066907 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 767763931,
+  "bounds": {
+    "minlat": -2.3494854,
+    "minlon": -47.0088589,
+    "maxlat": -2.3494245,
+    "maxlon": -47.0087301
+  },
+  "nodes": [
+    7168405640,
+    7168405638
+  ],
+  "geometry": [
+    { "lat": -2.3494245, "lon": -47.0087301 },
+    { "lat": -2.3494854, "lon": -47.0088589 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 767765391,
+  "bounds": {
+    "minlat": -3.8005273,
+    "minlon": -47.5443341,
+    "maxlat": -3.8005206,
+    "maxlon": -47.5442576
+  },
+  "nodes": [
+    7168406978,
+    7165875530
+  ],
+  "geometry": [
+    { "lat": -3.8005273, "lon": -47.5442576 },
+    { "lat": -3.8005206, "lon": -47.5443341 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 767765393,
+  "bounds": {
+    "minlat": -3.8003212,
+    "minlon": -47.5451924,
+    "maxlat": -3.8002811,
+    "maxlon": -47.5450959
+  },
+  "nodes": [
+    7165875533,
+    7165875534
+  ],
+  "geometry": [
+    { "lat": -3.8003212, "lon": -47.5450959 },
+    { "lat": -3.8002811, "lon": -47.5451924 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 767807675,
+  "bounds": {
+    "minlat": -3.7334363,
+    "minlon": -47.6135029,
+    "maxlat": -3.7333413,
+    "maxlon": -47.6134237
+  },
+  "nodes": [
+    7094685892,
+    7094685891
+  ],
+  "geometry": [
+    { "lat": -3.7334363, "lon": -47.6134237 },
+    { "lat": -3.7333413, "lon": -47.6135029 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 768018352,
+  "bounds": {
+    "minlat": -2.9386881,
+    "minlon": -47.0898190,
+    "maxlat": -2.9382273,
+    "maxlon": -47.0894650
+  },
+  "nodes": [
+    7170869874,
+    7170869873
+  ],
+  "geometry": [
+    { "lat": -2.9382273, "lon": -47.0894650 },
+    { "lat": -2.9386881, "lon": -47.0898190 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 768423062,
+  "bounds": {
+    "minlat": -3.4358148,
+    "minlon": -47.5272699,
+    "maxlat": -3.4357813,
+    "maxlon": -47.5271720
+  },
+  "nodes": [
+    7174096562,
+    7174098391
+  ],
+  "geometry": [
+    { "lat": -3.4357813, "lon": -47.5271720 },
+    { "lat": -3.4358148, "lon": -47.5272699 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 768423064,
+  "bounds": {
+    "minlat": -3.4602965,
+    "minlon": -47.5225090,
+    "maxlat": -3.4602831,
+    "maxlon": -47.5223668
+  },
+  "nodes": [
+    7081452198,
+    7081452195
+  ],
+  "geometry": [
+    { "lat": -3.4602965, "lon": -47.5223668 },
+    { "lat": -3.4602831, "lon": -47.5225090 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 775651295,
+  "bounds": {
+    "minlat": -3.3351246,
+    "minlon": -46.8732463,
+    "maxlat": -3.3350217,
+    "maxlon": -46.8729410
+  },
+  "nodes": [
+    7236157121,
+    7236157122
+  ],
+  "geometry": [
+    { "lat": -3.3350217, "lon": -46.8732463 },
+    { "lat": -3.3351246, "lon": -46.8729410 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 776652765,
+  "bounds": {
+    "minlat": -2.9776528,
+    "minlon": -47.7869211,
+    "maxlat": -2.9774734,
+    "maxlon": -47.7867495
+  },
+  "nodes": [
+    7246521280,
+    12587192010,
+    7246521279
+  ],
+  "geometry": [
+    { "lat": -2.9774734, "lon": -47.7867495 },
+    { "lat": -2.9775577, "lon": -47.7868292 },
+    { "lat": -2.9776528, "lon": -47.7869211 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 776664585,
+  "bounds": {
+    "minlat": -3.9992642,
+    "minlon": -47.3496164,
+    "maxlat": -3.9991546,
+    "maxlon": -47.3494797
+  },
+  "nodes": [
+    7161590999,
+    7161590993
+  ],
+  "geometry": [
+    { "lat": -3.9992642, "lon": -47.3494797 },
+    { "lat": -3.9991546, "lon": -47.3496164 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 776711542,
+  "bounds": {
+    "minlat": -2.1823102,
+    "minlon": -46.5677431,
+    "maxlat": -2.1821982,
+    "maxlon": -46.5676855
+  },
+  "nodes": [
+    4620963241,
+    7246897625
+  ],
+  "geometry": [
+    { "lat": -2.1823102, "lon": -46.5677431 },
+    { "lat": -2.1821982, "lon": -46.5676855 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 776886441,
+  "bounds": {
+    "minlat": -2.1434546,
+    "minlon": -46.5370010,
+    "maxlat": -2.1434244,
+    "maxlon": -46.5369111
+  },
+  "nodes": [
+    7248923788,
+    7248923787
+  ],
+  "geometry": [
+    { "lat": -2.1434244, "lon": -46.5370010 },
+    { "lat": -2.1434546, "lon": -46.5369111 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 776886444,
+  "bounds": {
+    "minlat": -2.1546442,
+    "minlon": -46.5483963,
+    "maxlat": -2.1545705,
+    "maxlon": -46.5483273
+  },
+  "nodes": [
+    4620962894,
+    4620962893
+  ],
+  "geometry": [
+    { "lat": -2.1546442, "lon": -46.5483963 },
+    { "lat": -2.1545705, "lon": -46.5483273 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 776886821,
+  "bounds": {
+    "minlat": -2.5500860,
+    "minlon": -48.2259062,
+    "maxlat": -2.5499064,
+    "maxlon": -48.2256272
+  },
+  "nodes": [
+    7248929411,
+    7248929412
+  ],
+  "geometry": [
+    { "lat": -2.5500860, "lon": -48.2256272 },
+    { "lat": -2.5499064, "lon": -48.2259062 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 776895564,
+  "bounds": {
+    "minlat": -2.8646489,
+    "minlon": -47.5140969,
+    "maxlat": -2.8645645,
+    "maxlon": -47.5140667
+  },
+  "nodes": [
+    7100455926,
+    7100455925
+  ],
+  "geometry": [
+    { "lat": -2.8645645, "lon": -47.5140667 },
+    { "lat": -2.8646489, "lon": -47.5140969 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 776895565,
+  "bounds": {
+    "minlat": -2.8525143,
+    "minlon": -47.5470807,
+    "maxlat": -2.8524640,
+    "maxlon": -47.5470559
+  },
+  "nodes": [
+    7249050445,
+    7249050444
+  ],
+  "geometry": [
+    { "lat": -2.8525143, "lon": -47.5470807 },
+    { "lat": -2.8524640, "lon": -47.5470559 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 776897691,
+  "bounds": {
+    "minlat": -2.9258949,
+    "minlon": -47.2045361,
+    "maxlat": -2.9256267,
+    "maxlon": -47.2044325
+  },
+  "nodes": [
+    7249086629,
+    7170774943
+  ],
+  "geometry": [
+    { "lat": -2.9256267, "lon": -47.2044325 },
+    { "lat": -2.9258949, "lon": -47.2045361 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 776907360,
+  "bounds": {
+    "minlat": -3.3894667,
+    "minlon": -47.0866607,
+    "maxlat": -3.3894513,
+    "maxlon": -47.0865561
+  },
+  "nodes": [
+    7249188974,
+    7249188975
+  ],
+  "geometry": [
+    { "lat": -3.3894667, "lon": -47.0865561 },
+    { "lat": -3.3894513, "lon": -47.0866607 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 776907886,
+  "bounds": {
+    "minlat": -3.8027741,
+    "minlon": -47.1030745,
+    "maxlat": -3.8026604,
+    "maxlon": -47.1029967
+  },
+  "nodes": [
+    7249166333,
+    7247084676
+  ],
+  "geometry": [
+    { "lat": -3.8026604, "lon": -47.1030745 },
+    { "lat": -3.8027741, "lon": -47.1029967 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 777038056,
+  "bounds": {
+    "minlat": -4.0194632,
+    "minlon": -47.8905720,
+    "maxlat": -4.0193649,
+    "maxlon": -47.8904478
+  },
+  "nodes": [
+    7250424274,
+    7250353914
+  ],
+  "geometry": [
+    { "lat": -4.0194632, "lon": -47.8904478 },
+    { "lat": -4.0193649, "lon": -47.8905720 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 777038058,
+  "bounds": {
+    "minlat": -4.0194906,
+    "minlon": -47.8951493,
+    "maxlat": -4.0193156,
+    "maxlon": -47.8949307
+  },
+  "nodes": [
+    7250424275,
+    7250353892
+  ],
+  "geometry": [
+    { "lat": -4.0193156, "lon": -47.8949307 },
+    { "lat": -4.0194906, "lon": -47.8951493 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 777109668,
+  "bounds": {
+    "minlat": -3.3840233,
+    "minlon": -47.1836816,
+    "maxlat": -3.3839564,
+    "maxlon": -47.1832269
+  },
+  "nodes": [
+    7247056871,
+    7247056872
+  ],
+  "geometry": [
+    { "lat": -3.3839564, "lon": -47.1832269 },
+    { "lat": -3.3840233, "lon": -47.1836816 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 779557957,
+  "bounds": {
+    "minlat": -3.3106067,
+    "minlon": -46.7212667,
+    "maxlat": -3.3105933,
+    "maxlon": -46.7211460
+  },
+  "nodes": [
+    7279460548,
+    7279500254
+  ],
+  "geometry": [
+    { "lat": -3.3105933, "lon": -46.7212667 },
+    { "lat": -3.3106067, "lon": -46.7211460 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 808368818,
+  "bounds": {
+    "minlat": -3.2914634,
+    "minlon": -46.4833850,
+    "maxlat": -3.2914098,
+    "maxlon": -46.4833675
+  },
+  "nodes": [
+    7558746363,
+    7558746362
+  ],
+  "geometry": [
+    { "lat": -3.2914634, "lon": -46.4833850 },
+    { "lat": -3.2914098, "lon": -46.4833675 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 824366670,
+  "bounds": {
+    "minlat": -2.9491518,
+    "minlon": -48.9537069,
+    "maxlat": -2.9489085,
+    "maxlon": -48.9536117
+  },
+  "nodes": [
+    924664062,
+    7697435431
+  ],
+  "geometry": [
+    { "lat": -2.9489085, "lon": -48.9537069 },
+    { "lat": -2.9491518, "lon": -48.9536117 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "trunk",
+    "lanes": "2",
+    "layer": "1",
+    "lit": "yes",
+    "maxspeed": "60",
+    "oneway": "no",
+    "ref": "PA-150;PA-475",
+    "source": "landsat; survey",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 824366676,
+  "bounds": {
+    "minlat": -2.9791006,
+    "minlon": -48.9804840,
+    "maxlat": -2.9790845,
+    "maxlon": -48.9802453
+  },
+  "nodes": [
+    5884741309,
+    7697435579
+  ],
+  "geometry": [
+    { "lat": -2.9791006, "lon": -48.9802453 },
+    { "lat": -2.9790845, "lon": -48.9804840 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 824366678,
+  "bounds": {
+    "minlat": -2.9594369,
+    "minlon": -48.9827880,
+    "maxlat": -2.9594343,
+    "maxlon": -48.9826164
+  },
+  "nodes": [
+    7697435581,
+    7697435580
+  ],
+  "geometry": [
+    { "lat": -2.9594343, "lon": -48.9826164 },
+    { "lat": -2.9594369, "lon": -48.9827880 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 824366681,
+  "bounds": {
+    "minlat": -2.9433838,
+    "minlon": -48.9939058,
+    "maxlat": -2.9433838,
+    "maxlon": -48.9937019
+  },
+  "nodes": [
+    7697435583,
+    7697435582
+  ],
+  "geometry": [
+    { "lat": -2.9433838, "lon": -48.9937019 },
+    { "lat": -2.9433838, "lon": -48.9939058 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Travessa Pôrto de Moz",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 824366683,
+  "bounds": {
+    "minlat": -2.9273217,
+    "minlon": -48.9933090,
+    "maxlat": -2.9273177,
+    "maxlon": -48.9931648
+  },
+  "nodes": [
+    6904856511,
+    6904856506
+  ],
+  "geometry": [
+    { "lat": -2.9273217, "lon": -48.9931648 },
+    { "lat": -2.9273177, "lon": -48.9933090 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Vicinal Balneário Beira Rio",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 824366685,
+  "bounds": {
+    "minlat": -2.9114750,
+    "minlon": -49.0015729,
+    "maxlat": -2.9114475,
+    "maxlon": -49.0013650
+  },
+  "nodes": [
+    6904689657,
+    6904689658
+  ],
+  "geometry": [
+    { "lat": -2.9114750, "lon": -49.0013650 },
+    { "lat": -2.9114475, "lon": -49.0015729 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 824366687,
+  "bounds": {
+    "minlat": -2.8851506,
+    "minlon": -49.0044954,
+    "maxlat": -2.8850927,
+    "maxlon": -49.0041947
+  },
+  "nodes": [
+    7697435586,
+    7697435584
+  ],
+  "geometry": [
+    { "lat": -2.8850927, "lon": -49.0044954 },
+    { "lat": -2.8851506, "lon": -49.0041947 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 824366693,
+  "bounds": {
+    "minlat": -2.9637005,
+    "minlon": -48.8803535,
+    "maxlat": -2.9636577,
+    "maxlon": -48.8801658
+  },
+  "nodes": [
+    6762915217,
+    6762915218
+  ],
+  "geometry": [
+    { "lat": -2.9636577, "lon": -48.8801658 },
+    { "lat": -2.9637005, "lon": -48.8803535 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 824366695,
+  "bounds": {
+    "minlat": -2.8717070,
+    "minlon": -48.8345155,
+    "maxlat": -2.8717056,
+    "maxlon": -48.8344015
+  },
+  "nodes": [
+    7262282319,
+    7262282320
+  ],
+  "geometry": [
+    { "lat": -2.8717070, "lon": -48.8344015 },
+    { "lat": -2.8717056, "lon": -48.8345155 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 930413709,
+  "bounds": {
+    "minlat": -2.2064075,
+    "minlon": -47.0260781,
+    "maxlat": -2.2063902,
+    "maxlon": -47.0259939
+  },
+  "nodes": [
+    8627019926,
+    8627019925
+  ],
+  "geometry": [
+    { "lat": -2.2063902, "lon": -47.0259939 },
+    { "lat": -2.2064075, "lon": -47.0260781 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 930413711,
+  "bounds": {
+    "minlat": -2.1929383,
+    "minlon": -47.0198177,
+    "maxlat": -2.1928729,
+    "maxlon": -47.0197576
+  },
+  "nodes": [
+    8627019930,
+    8627019929
+  ],
+  "geometry": [
+    { "lat": -2.1928729, "lon": -47.0197576 },
+    { "lat": -2.1929383, "lon": -47.0198177 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 930413714,
+  "bounds": {
+    "minlat": -2.1460562,
+    "minlon": -46.9921733,
+    "maxlat": -2.1459753,
+    "maxlon": -46.9921719
+  },
+  "nodes": [
+    8627019956,
+    8627019955
+  ],
+  "geometry": [
+    { "lat": -2.1460562, "lon": -46.9921719 },
+    { "lat": -2.1459753, "lon": -46.9921733 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "Estrada do Bom Futuro"
+  }
+},
+{
+  "type": "way",
+  "id": 930413718,
+  "bounds": {
+    "minlat": -2.1193009,
+    "minlon": -46.9840268,
+    "maxlat": -2.1192185,
+    "maxlon": -46.9840034
+  },
+  "nodes": [
+    8627021031,
+    8627021030
+  ],
+  "geometry": [
+    { "lat": -2.1193009, "lon": -46.9840268 },
+    { "lat": -2.1192185, "lon": -46.9840034 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "Estrada do Bom Futuro"
+  }
+},
+{
+  "type": "way",
+  "id": 970366776,
+  "bounds": {
+    "minlat": -2.3186539,
+    "minlon": -46.9493610,
+    "maxlat": -2.3185661,
+    "maxlon": -46.9492590
+  },
+  "nodes": [
+    8979988959,
+    8979988960
+  ],
+  "geometry": [
+    { "lat": -2.3185661, "lon": -46.9493610 },
+    { "lat": -2.3186539, "lon": -46.9492590 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada da Canaã",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 970366778,
+  "bounds": {
+    "minlat": -2.4055094,
+    "minlon": -47.0043853,
+    "maxlat": -2.4054317,
+    "maxlon": -47.0043008
+  },
+  "nodes": [
+    7165405068,
+    7165405069
+  ],
+  "geometry": [
+    { "lat": -2.4054317, "lon": -47.0043008 },
+    { "lat": -2.4055094, "lon": -47.0043853 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 991603071,
+  "bounds": {
+    "minlat": -2.2547911,
+    "minlon": -46.9944260,
+    "maxlat": -2.2547761,
+    "maxlon": -46.9943462
+  },
+  "nodes": [
+    9161583106,
+    9161583105
+  ],
+  "geometry": [
+    { "lat": -2.2547911, "lon": -46.9943462 },
+    { "lat": -2.2547761, "lon": -46.9944260 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "tertiary",
+    "layer": "1",
+    "name": "Estrada do Bom Futuro"
+  }
+},
+{
+  "type": "way",
+  "id": 991603073,
+  "bounds": {
+    "minlat": -2.2589840,
+    "minlon": -46.9940273,
+    "maxlat": -2.2589182,
+    "maxlon": -46.9939777
+  },
+  "nodes": [
+    9161583108,
+    9161583107
+  ],
+  "geometry": [
+    { "lat": -2.2589182, "lon": -46.9939777 },
+    { "lat": -2.2589840, "lon": -46.9940273 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 991603075,
+  "bounds": {
+    "minlat": -2.2687002,
+    "minlon": -47.0260297,
+    "maxlat": -2.2686669,
+    "maxlon": -47.0259535
+  },
+  "nodes": [
+    9161715820,
+    9161715819
+  ],
+  "geometry": [
+    { "lat": -2.2686669, "lon": -47.0259535 },
+    { "lat": -2.2687002, "lon": -47.0260297 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 991603077,
+  "bounds": {
+    "minlat": -2.2527382,
+    "minlon": -47.0365167,
+    "maxlat": -2.2526654,
+    "maxlon": -47.0364761
+  },
+  "nodes": [
+    9161715826,
+    9161715825
+  ],
+  "geometry": [
+    { "lat": -2.2527382, "lon": -47.0365167 },
+    { "lat": -2.2526654, "lon": -47.0364761 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 991603079,
+  "bounds": {
+    "minlat": -2.2407339,
+    "minlon": -47.0447634,
+    "maxlat": -2.2406305,
+    "maxlon": -47.0446871
+  },
+  "nodes": [
+    9161715832,
+    9161715831
+  ],
+  "geometry": [
+    { "lat": -2.2406305, "lon": -47.0446871 },
+    { "lat": -2.2407339, "lon": -47.0447634 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 991603082,
+  "bounds": {
+    "minlat": -2.2988141,
+    "minlon": -47.0567669,
+    "maxlat": -2.2986962,
+    "maxlon": -47.0567481
+  },
+  "nodes": [
+    9161715998,
+    9161715997
+  ],
+  "geometry": [
+    { "lat": -2.2986962, "lon": -47.0567481 },
+    { "lat": -2.2988141, "lon": -47.0567669 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1012183956,
+  "bounds": {
+    "minlat": -2.3415856,
+    "minlon": -46.9647262,
+    "maxlat": -2.3414429,
+    "maxlon": -46.9646477
+  },
+  "nodes": [
+    7168495041,
+    7168495040
+  ],
+  "geometry": [
+    { "lat": -2.3414429, "lon": -46.9647262 },
+    { "lat": -2.3415856, "lon": -46.9646477 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada do Baixa da Égua",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012317487,
+  "bounds": {
+    "minlat": -2.5405396,
+    "minlon": -47.0488842,
+    "maxlat": -2.5405135,
+    "maxlon": -47.0487418
+  },
+  "nodes": [
+    9339378503,
+    9339378502
+  ],
+  "geometry": [
+    { "lat": -2.5405135, "lon": -47.0488842 },
+    { "lat": -2.5405396, "lon": -47.0487418 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012317489,
+  "bounds": {
+    "minlat": -2.4978763,
+    "minlon": -47.0341915,
+    "maxlat": -2.4977441,
+    "maxlon": -47.0341870
+  },
+  "nodes": [
+    4731312346,
+    9339378512
+  ],
+  "geometry": [
+    { "lat": -2.4978763, "lon": -47.0341870 },
+    { "lat": -2.4977441, "lon": -47.0341915 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012317491,
+  "bounds": {
+    "minlat": -2.5147286,
+    "minlon": -47.0387552,
+    "maxlat": -2.5147222,
+    "maxlon": -47.0386564
+  },
+  "nodes": [
+    9339378514,
+    9339378513
+  ],
+  "geometry": [
+    { "lat": -2.5147286, "lon": -47.0386564 },
+    { "lat": -2.5147222, "lon": -47.0387552 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012317494,
+  "bounds": {
+    "minlat": -2.4858362,
+    "minlon": -46.9987056,
+    "maxlat": -2.4857109,
+    "maxlon": -46.9986122
+  },
+  "nodes": [
+    4729160397,
+    4729160398
+  ],
+  "geometry": [
+    { "lat": -2.4857109, "lon": -46.9987056 },
+    { "lat": -2.4858362, "lon": -46.9986122 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012317496,
+  "bounds": {
+    "minlat": -2.4462611,
+    "minlon": -46.9350790,
+    "maxlat": -2.4461989,
+    "maxlon": -46.9349017
+  },
+  "nodes": [
+    9339378536,
+    9339378537
+  ],
+  "geometry": [
+    { "lat": -2.4461989, "lon": -46.9350790 },
+    { "lat": -2.4462611, "lon": -46.9349017 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012317498,
+  "bounds": {
+    "minlat": -2.4219303,
+    "minlon": -46.9026873,
+    "maxlat": -2.4215511,
+    "maxlon": -46.9025107
+  },
+  "nodes": [
+    9339378538,
+    9339378539
+  ],
+  "geometry": [
+    { "lat": -2.4215511, "lon": -46.9026873 },
+    { "lat": -2.4219303, "lon": -46.9025107 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada da Canaã",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012317500,
+  "bounds": {
+    "minlat": -2.4203716,
+    "minlon": -46.8649638,
+    "maxlat": -2.4201735,
+    "maxlon": -46.8648575
+  },
+  "nodes": [
+    9339378555,
+    4729161062
+  ],
+  "geometry": [
+    { "lat": -2.4201735, "lon": -46.8649638 },
+    { "lat": -2.4203716, "lon": -46.8648575 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada da Marajoara"
+  }
+},
+{
+  "type": "way",
+  "id": 1012317502,
+  "bounds": {
+    "minlat": -2.4918342,
+    "minlon": -47.0678888,
+    "maxlat": -2.4917813,
+    "maxlon": -47.0678398
+  },
+  "nodes": [
+    7107889873,
+    9339378556
+  ],
+  "geometry": [
+    { "lat": -2.4918342, "lon": -47.0678398 },
+    { "lat": -2.4917813, "lon": -47.0678888 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012430195,
+  "bounds": {
+    "minlat": -2.5890849,
+    "minlon": -46.9568997,
+    "maxlat": -2.5890763,
+    "maxlon": -46.9568309
+  },
+  "nodes": [
+    9340389865,
+    7220559571
+  ],
+  "geometry": [
+    { "lat": -2.5890849, "lon": -46.9568997 },
+    { "lat": -2.5890763, "lon": -46.9568309 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012430197,
+  "bounds": {
+    "minlat": -2.6082112,
+    "minlon": -46.9485016,
+    "maxlat": -2.6081503,
+    "maxlon": -46.9484391
+  },
+  "nodes": [
+    9340389898,
+    9340389897
+  ],
+  "geometry": [
+    { "lat": -2.6081503, "lon": -46.9484391 },
+    { "lat": -2.6082112, "lon": -46.9485016 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada do Cacimbão",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012430199,
+  "bounds": {
+    "minlat": -2.6048296,
+    "minlon": -46.9491237,
+    "maxlat": -2.6048164,
+    "maxlon": -46.9490601
+  },
+  "nodes": [
+    9340389901,
+    9340389900
+  ],
+  "geometry": [
+    { "lat": -2.6048164, "lon": -46.9490601 },
+    { "lat": -2.6048296, "lon": -46.9491237 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012430201,
+  "bounds": {
+    "minlat": -2.6021563,
+    "minlon": -46.9496834,
+    "maxlat": -2.6021298,
+    "maxlon": -46.9496267
+  },
+  "nodes": [
+    9340389904,
+    9340389903
+  ],
+  "geometry": [
+    { "lat": -2.6021563, "lon": -46.9496834 },
+    { "lat": -2.6021298, "lon": -46.9496267 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1012525839,
+  "bounds": {
+    "minlat": -2.2584876,
+    "minlon": -46.9164322,
+    "maxlat": -2.2583365,
+    "maxlon": -46.9162925
+  },
+  "nodes": [
+    9341264950,
+    9341264949
+  ],
+  "geometry": [
+    { "lat": -2.2583365, "lon": -46.9164322 },
+    { "lat": -2.2584876, "lon": -46.9162925 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1012525850,
+  "bounds": {
+    "minlat": -2.1196278,
+    "minlon": -46.9128483,
+    "maxlat": -2.1196039,
+    "maxlon": -46.9126966
+  },
+  "nodes": [
+    4729500125,
+    9341271161
+  ],
+  "geometry": [
+    { "lat": -2.1196039, "lon": -46.9128483 },
+    { "lat": -2.1196278, "lon": -46.9126966 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "track",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1012525856,
+  "bounds": {
+    "minlat": -2.2495350,
+    "minlon": -46.9653095,
+    "maxlat": -2.2495337,
+    "maxlon": -46.9652345
+  },
+  "nodes": [
+    6911101624,
+    9341271172
+  ],
+  "geometry": [
+    { "lat": -2.2495337, "lon": -46.9653095 },
+    { "lat": -2.2495350, "lon": -46.9652345 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada do Castanheira",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1012876792,
+  "bounds": {
+    "minlat": -2.2933419,
+    "minlon": -46.8405158,
+    "maxlat": -2.2932793,
+    "maxlon": -46.8404391
+  },
+  "nodes": [
+    4729477121,
+    9344722470
+  ],
+  "geometry": [
+    { "lat": -2.2932793, "lon": -46.8405158 },
+    { "lat": -2.2933419, "lon": -46.8404391 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada do Guajará",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1022121857,
+  "bounds": {
+    "minlat": -2.3630336,
+    "minlon": -47.0746511,
+    "maxlat": -2.3630131,
+    "maxlon": -47.0745616
+  },
+  "nodes": [
+    9426920118,
+    4733125711
+  ],
+  "geometry": [
+    { "lat": -2.3630131, "lon": -47.0746511 },
+    { "lat": -2.3630336, "lon": -47.0745616 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1022121858,
+  "bounds": {
+    "minlat": -2.3596686,
+    "minlon": -47.0715037,
+    "maxlat": -2.3596347,
+    "maxlon": -47.0713976
+  },
+  "nodes": [
+    9426920121,
+    4729106347
+  ],
+  "geometry": [
+    { "lat": -2.3596686, "lon": -47.0713976 },
+    { "lat": -2.3596347, "lon": -47.0715037 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1022121860,
+  "bounds": {
+    "minlat": -2.3583220,
+    "minlon": -47.0669263,
+    "maxlat": -2.3581841,
+    "maxlon": -47.0668484
+  },
+  "nodes": [
+    4729106408,
+    4729106409
+  ],
+  "geometry": [
+    { "lat": -2.3581841, "lon": -47.0669263 },
+    { "lat": -2.3583220, "lon": -47.0668484 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1025459700,
+  "bounds": {
+    "minlat": -3.6167224,
+    "minlon": -47.1404237,
+    "maxlat": -3.6164139,
+    "maxlon": -47.1403481
+  },
+  "nodes": [
+    9455038903,
+    9455038902
+  ],
+  "geometry": [
+    { "lat": -3.6167224, "lon": -47.1404237 },
+    { "lat": -3.6164139, "lon": -47.1403481 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "source": "bing",
+    "surface": "ground"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309144,
+  "bounds": {
+    "minlat": -2.4415678,
+    "minlon": -47.0094780,
+    "maxlat": -2.4414878,
+    "maxlon": -47.0094627
+  },
+  "nodes": [
+    9586834128,
+    9586834127
+  ],
+  "geometry": [
+    { "lat": -2.4414878, "lon": -47.0094627 },
+    { "lat": -2.4415678, "lon": -47.0094780 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada da Palestina",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309146,
+  "bounds": {
+    "minlat": -2.4423774,
+    "minlon": -46.9865892,
+    "maxlat": -2.4422963,
+    "maxlon": -46.9865883
+  },
+  "nodes": [
+    9586834130,
+    9586834129
+  ],
+  "geometry": [
+    { "lat": -2.4422963, "lon": -46.9865883 },
+    { "lat": -2.4423774, "lon": -46.9865892 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309148,
+  "bounds": {
+    "minlat": -2.4364673,
+    "minlon": -46.9809912,
+    "maxlat": -2.4364247,
+    "maxlon": -46.9809381
+  },
+  "nodes": [
+    7165435395,
+    9586834131
+  ],
+  "geometry": [
+    { "lat": -2.4364673, "lon": -46.9809381 },
+    { "lat": -2.4364247, "lon": -46.9809912 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada do Arrependido",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309150,
+  "bounds": {
+    "minlat": -2.4292145,
+    "minlon": -46.9464699,
+    "maxlat": -2.4291337,
+    "maxlon": -46.9464615
+  },
+  "nodes": [
+    9586834133,
+    9586834132
+  ],
+  "geometry": [
+    { "lat": -2.4291337, "lon": -46.9464615 },
+    { "lat": -2.4292145, "lon": -46.9464699 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada do São João do Coraci",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309154,
+  "bounds": {
+    "minlat": -2.5728609,
+    "minlon": -46.9411826,
+    "maxlat": -2.5728204,
+    "maxlon": -46.9411123
+  },
+  "nodes": [
+    9586834183,
+    9586834182
+  ],
+  "geometry": [
+    { "lat": -2.5728204, "lon": -46.9411123 },
+    { "lat": -2.5728609, "lon": -46.9411826 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada do Cacimbão",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309156,
+  "bounds": {
+    "minlat": -2.5342933,
+    "minlon": -46.9530152,
+    "maxlat": -2.5342452,
+    "maxlon": -46.9529496
+  },
+  "nodes": [
+    9586834185,
+    9586834184
+  ],
+  "geometry": [
+    { "lat": -2.5342452, "lon": -46.9530152 },
+    { "lat": -2.5342933, "lon": -46.9529496 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309159,
+  "bounds": {
+    "minlat": -2.5302577,
+    "minlon": -46.9601177,
+    "maxlat": -2.5302039,
+    "maxlon": -46.9601097
+  },
+  "nodes": [
+    9586834198,
+    4729381010
+  ],
+  "geometry": [
+    { "lat": -2.5302039, "lon": -46.9601177 },
+    { "lat": -2.5302577, "lon": -46.9601097 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309161,
+  "bounds": {
+    "minlat": -2.5305905,
+    "minlon": -46.9587269,
+    "maxlat": -2.5305135,
+    "maxlon": -46.9587009
+  },
+  "nodes": [
+    9586834200,
+    9586834199
+  ],
+  "geometry": [
+    { "lat": -2.5305135, "lon": -46.9587009 },
+    { "lat": -2.5305905, "lon": -46.9587269 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309163,
+  "bounds": {
+    "minlat": -2.5307475,
+    "minlon": -46.9581002,
+    "maxlat": -2.5306709,
+    "maxlon": -46.9580737
+  },
+  "nodes": [
+    9586834202,
+    9586834201
+  ],
+  "geometry": [
+    { "lat": -2.5306709, "lon": -46.9580737 },
+    { "lat": -2.5307475, "lon": -46.9581002 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309165,
+  "bounds": {
+    "minlat": -2.5315385,
+    "minlon": -46.9569748,
+    "maxlat": -2.5314616,
+    "maxlon": -46.9569488
+  },
+  "nodes": [
+    9586834206,
+    9586834205
+  ],
+  "geometry": [
+    { "lat": -2.5314616, "lon": -46.9569488 },
+    { "lat": -2.5315385, "lon": -46.9569748 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309167,
+  "bounds": {
+    "minlat": -2.5324520,
+    "minlon": -46.9552719,
+    "maxlat": -2.5323751,
+    "maxlon": -46.9552469
+  },
+  "nodes": [
+    9586834208,
+    9586834207
+  ],
+  "geometry": [
+    { "lat": -2.5323751, "lon": -46.9552469 },
+    { "lat": -2.5324520, "lon": -46.9552719 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041309169,
+  "bounds": {
+    "minlat": -2.5329107,
+    "minlon": -46.9534143,
+    "maxlat": -2.5328294,
+    "maxlon": -46.9534071
+  },
+  "nodes": [
+    9586834210,
+    9586834209
+  ],
+  "geometry": [
+    { "lat": -2.5329107, "lon": -46.9534071 },
+    { "lat": -2.5328294, "lon": -46.9534143 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041529484,
+  "bounds": {
+    "minlat": -2.3076818,
+    "minlon": -46.9111430,
+    "maxlat": -2.3076207,
+    "maxlon": -46.9110894
+  },
+  "nodes": [
+    9588629798,
+    9588629797
+  ],
+  "geometry": [
+    { "lat": -2.3076207, "lon": -46.9111430 },
+    { "lat": -2.3076818, "lon": -46.9110894 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "name": "Estrada da Marajoara",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041695001,
+  "bounds": {
+    "minlat": -2.4640239,
+    "minlon": -46.9867529,
+    "maxlat": -2.4639413,
+    "maxlon": -46.9867452
+  },
+  "nodes": [
+    9590053086,
+    9590053085
+  ],
+  "geometry": [
+    { "lat": -2.4639413, "lon": -46.9867529 },
+    { "lat": -2.4640239, "lon": -46.9867452 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041695003,
+  "bounds": {
+    "minlat": -2.4769507,
+    "minlon": -47.0003870,
+    "maxlat": -2.4769237,
+    "maxlon": -47.0002967
+  },
+  "nodes": [
+    9590053088,
+    9590053087
+  ],
+  "geometry": [
+    { "lat": -2.4769237, "lon": -47.0002967 },
+    { "lat": -2.4769507, "lon": -47.0003870 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041695009,
+  "bounds": {
+    "minlat": -2.4967874,
+    "minlon": -47.0090114,
+    "maxlat": -2.4967085,
+    "maxlon": -47.0089935
+  },
+  "nodes": [
+    9590055559,
+    9590055558
+  ],
+  "geometry": [
+    { "lat": -2.4967874, "lon": -47.0089935 },
+    { "lat": -2.4967085, "lon": -47.0090114 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041695011,
+  "bounds": {
+    "minlat": -2.5172572,
+    "minlon": -47.0352286,
+    "maxlat": -2.5171811,
+    "maxlon": -47.0351981
+  },
+  "nodes": [
+    9590055561,
+    9590055560
+  ],
+  "geometry": [
+    { "lat": -2.5171811, "lon": -47.0351981 },
+    { "lat": -2.5172572, "lon": -47.0352286 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041695015,
+  "bounds": {
+    "minlat": -2.5395135,
+    "minlon": -47.0692851,
+    "maxlat": -2.5394315,
+    "maxlon": -47.0692804
+  },
+  "nodes": [
+    9590055601,
+    9590055600
+  ],
+  "geometry": [
+    { "lat": -2.5394315, "lon": -47.0692804 },
+    { "lat": -2.5395135, "lon": -47.0692851 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1041695017,
+  "bounds": {
+    "minlat": -2.5464489,
+    "minlon": -47.0800034,
+    "maxlat": -2.5464162,
+    "maxlon": -47.0799275
+  },
+  "nodes": [
+    9590055603,
+    9590055602
+  ],
+  "geometry": [
+    { "lat": -2.5464162, "lon": -47.0799275 },
+    { "lat": -2.5464489, "lon": -47.0800034 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1053396240,
+  "bounds": {
+    "minlat": -2.1097952,
+    "minlon": -49.0190634,
+    "maxlat": -2.1094827,
+    "maxlon": -49.0189266
+  },
+  "nodes": [
+    9680667641,
+    9680667642
+  ],
+  "geometry": [
+    { "lat": -2.1097952, "lon": -49.0190634 },
+    { "lat": -2.1094827, "lon": -49.0189266 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "lanes": "2",
+    "layer": "1",
+    "name": "Rodovia Governador Moura Carvalho",
+    "ref": "PA-151",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1087976956,
+  "bounds": {
+    "minlat": -2.5841935,
+    "minlon": -48.6517310,
+    "maxlat": -2.5837705,
+    "maxlon": -48.6515196
+  },
+  "nodes": [
+    9968385061,
+    9968385060
+  ],
+  "geometry": [
+    { "lat": -2.5841935, "lon": -48.6517310 },
+    { "lat": -2.5837705, "lon": -48.6515196 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1109709385,
+  "bounds": {
+    "minlat": -3.7247637,
+    "minlon": -47.5128757,
+    "maxlat": -3.7247400,
+    "maxlon": -47.5127937
+  },
+  "nodes": [
+    10152113573,
+    10152113432,
+    10152113572
+  ],
+  "geometry": [
+    { "lat": -3.7247637, "lon": -47.5127937 },
+    { "lat": -3.7247521, "lon": -47.5128342 },
+    { "lat": -3.7247400, "lon": -47.5128757 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "path",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1124972028,
+  "bounds": {
+    "minlat": -2.9926702,
+    "minlon": -47.3503232,
+    "maxlat": -2.9925095,
+    "maxlon": -47.3501381
+  },
+  "nodes": [
+    10287497282,
+    10287497281
+  ],
+  "geometry": [
+    { "lat": -2.9925095, "lon": -47.3501381 },
+    { "lat": -2.9926702, "lon": -47.3503232 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1160023103,
+  "bounds": {
+    "minlat": -2.9336643,
+    "minlon": -47.9142398,
+    "maxlat": -2.9335458,
+    "maxlon": -47.9141988
+  },
+  "nodes": [
+    10788571965,
+    10788571964
+  ],
+  "geometry": [
+    { "lat": -2.9336643, "lon": -47.9142398 },
+    { "lat": -2.9335458, "lon": -47.9141988 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1160035413,
+  "bounds": {
+    "minlat": -2.5646874,
+    "minlon": -48.2751936,
+    "maxlat": -2.5643821,
+    "maxlon": -48.2746947
+  },
+  "nodes": [
+    10788656056,
+    10788656060
+  ],
+  "geometry": [
+    { "lat": -2.5643821, "lon": -48.2746947 },
+    { "lat": -2.5646874, "lon": -48.2751936 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1160040389,
+  "bounds": {
+    "minlat": -2.9140325,
+    "minlon": -47.8954782,
+    "maxlat": -2.9137364,
+    "maxlon": -47.8954782
+  },
+  "nodes": [
+    10788712188,
+    10788712189
+  ],
+  "geometry": [
+    { "lat": -2.9137364, "lon": -47.8954782 },
+    { "lat": -2.9140325, "lon": -47.8954782 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1160040391,
+  "bounds": {
+    "minlat": -2.9199804,
+    "minlon": -47.8947492,
+    "maxlat": -2.9198892,
+    "maxlon": -47.8946991
+  },
+  "nodes": [
+    10788712201,
+    10788712196
+  ],
+  "geometry": [
+    { "lat": -2.9199804, "lon": -47.8946991 },
+    { "lat": -2.9198892, "lon": -47.8947492 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1160956003,
+  "bounds": {
+    "minlat": -2.1402252,
+    "minlon": -46.9729971,
+    "maxlat": -2.1401067,
+    "maxlon": -46.9729652
+  },
+  "nodes": [
+    10798172284,
+    10798172285
+  ],
+  "geometry": [
+    { "lat": -2.1401067, "lon": -46.9729652 },
+    { "lat": -2.1402252, "lon": -46.9729971 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "ref": "PA-124",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1160956614,
+  "bounds": {
+    "minlat": -2.1011365,
+    "minlon": -46.9879346,
+    "maxlat": -2.1010656,
+    "maxlon": -46.9878824
+  },
+  "nodes": [
+    4728626006,
+    10798167016
+  ],
+  "geometry": [
+    { "lat": -2.1010656, "lon": -46.9879346 },
+    { "lat": -2.1011365, "lon": -46.9878824 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "ref": "PA-124",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1219471925,
+  "bounds": {
+    "minlat": -3.0027704,
+    "minlon": -49.0668790,
+    "maxlat": -3.0027397,
+    "maxlon": -49.0659916
+  },
+  "nodes": [
+    8709742544,
+    3748350048
+  ],
+  "geometry": [
+    { "lat": -3.0027397, "lon": -49.0668790 },
+    { "lat": -3.0027704, "lon": -49.0659916 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 1226044315,
+  "bounds": {
+    "minlat": -2.2443406,
+    "minlon": -48.7806580,
+    "maxlat": -2.2443090,
+    "maxlon": -48.7805834
+  },
+  "nodes": [
+    11369656559,
+    11369656558
+  ],
+  "geometry": [
+    { "lat": -2.2443090, "lon": -48.7806580 },
+    { "lat": -2.2443406, "lon": -48.7805834 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1226044317,
+  "bounds": {
+    "minlat": -2.2236940,
+    "minlon": -48.7790511,
+    "maxlat": -2.2236777,
+    "maxlon": -48.7789712
+  },
+  "nodes": [
+    11369656563,
+    11369656562
+  ],
+  "geometry": [
+    { "lat": -2.2236940, "lon": -48.7790511 },
+    { "lat": -2.2236777, "lon": -48.7789712 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1226044319,
+  "bounds": {
+    "minlat": -2.1835717,
+    "minlon": -48.7874175,
+    "maxlat": -2.1835319,
+    "maxlon": -48.7872432
+  },
+  "nodes": [
+    11369656565,
+    11369656567
+  ],
+  "geometry": [
+    { "lat": -2.1835717, "lon": -48.7872432 },
+    { "lat": -2.1835319, "lon": -48.7874175 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1226044321,
+  "bounds": {
+    "minlat": -2.1580322,
+    "minlon": -48.7855455,
+    "maxlat": -2.1579852,
+    "maxlon": -48.7854349
+  },
+  "nodes": [
+    11369656568,
+    6219273032
+  ],
+  "geometry": [
+    { "lat": -2.1579852, "lon": -48.7855455 },
+    { "lat": -2.1580322, "lon": -48.7854349 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1253447225,
+  "bounds": {
+    "minlat": -3.2055607,
+    "minlon": -49.0408230,
+    "maxlat": -3.2050144,
+    "maxlon": -49.0398681
+  },
+  "nodes": [
+    11651084127,
+    11650998961
+  ],
+  "geometry": [
+    { "lat": -3.2050144, "lon": -49.0408230 },
+    { "lat": -3.2055607, "lon": -49.0398681 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "source": "maxar"
+  }
+},
+{
+  "type": "way",
+  "id": 1313026181,
+  "bounds": {
+    "minlat": -2.4159514,
+    "minlon": -48.6917630,
+    "maxlat": -2.4144748,
+    "maxlon": -48.6886865
+  },
+  "nodes": [
+    7168618210,
+    7071350176
+  ],
+  "geometry": [
+    { "lat": -2.4159514, "lon": -48.6917630 },
+    { "lat": -2.4144748, "lon": -48.6886865 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "secondary",
+    "layer": "1",
+    "ref": "PA-256",
+    "surface": "dirt"
+  }
+},
+{
+  "type": "way",
+  "id": 1313246753,
+  "bounds": {
+    "minlat": -3.0069555,
+    "minlon": -47.3743082,
+    "maxlat": -3.0068102,
+    "maxlon": -47.3740842
+  },
+  "nodes": [
+    6865906177,
+    12155432618
+  ],
+  "geometry": [
+    { "lat": -3.0069555, "lon": -47.3743082 },
+    { "lat": -3.0068102, "lon": -47.3740842 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1416406190,
+  "bounds": {
+    "minlat": -3.0206679,
+    "minlon": -47.3385802,
+    "maxlat": -3.0205531,
+    "maxlon": -47.3384695
+  },
+  "nodes": [
+    13016303321,
+    13016303320
+  ],
+  "geometry": [
+    { "lat": -3.0206679, "lon": -47.3385802 },
+    { "lat": -3.0205531, "lon": -47.3384695 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1416406192,
+  "bounds": {
+    "minlat": -3.0182246,
+    "minlon": -47.3351432,
+    "maxlat": -3.0180519,
+    "maxlon": -47.3349045
+  },
+  "nodes": [
+    13016303318,
+    13016303317
+  ],
+  "geometry": [
+    { "lat": -3.0182246, "lon": -47.3351432 },
+    { "lat": -3.0180519, "lon": -47.3349045 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 1423481937,
+  "bounds": {
+    "minlat": -2.4131872,
+    "minlon": -48.2535356,
+    "maxlat": -2.4131617,
+    "maxlon": -48.2534216
+  },
+  "nodes": [
+    13083774444,
+    13083774445
+  ],
+  "geometry": [
+    { "lat": -2.4131872, "lon": -48.2535356 },
+    { "lat": -2.4131617, "lon": -48.2534216 }
+  ],
+  "tags": {
+    "alt_name": "Travessa 25 de Outubro",
+    "bridge": "yes",
+    "highway": "residential",
+    "layer": "1",
+    "name": "Travessa Vinte e Cinco de Outubro"
+  }
+},
+{
+  "type": "way",
+  "id": 1458266750,
+  "bounds": {
+    "minlat": -2.4858301,
+    "minlon": -47.0620228,
+    "maxlat": -2.4857200,
+    "maxlon": -47.0619685
+  },
+  "nodes": [
+    7107889946,
+    13373825280
+  ],
+  "geometry": [
+    { "lat": -2.4857200, "lon": -47.0620228 },
+    { "lat": -2.4858301, "lon": -47.0619685 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "highway": "unclassified",
+    "layer": "1",
+    "surface": "unpaved"
+  }
+}
+
+  ]
+}
