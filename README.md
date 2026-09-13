@@ -4,6 +4,8 @@ Solução para o **Desafio 3** do AmazôniaHack 4.0: roteamento **offline** sobr
 malha viária não oficial de Paragominas (PA) — vias que não aparecem no Google Maps
 nem na cartografia oficial, detectadas pelo PrevisIA a partir de imagens Sentinel-2.
 
+[![Capa da apresentação — GeoVicinal](capa-slide.png)](geovicinal-desafio3.pptx)
+
 ## O problema
 
 O PrevisIA entrega traços de estrada extraídos por sensoriamento remoto, mas **um
