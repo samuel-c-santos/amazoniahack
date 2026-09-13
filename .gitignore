@@ -18,6 +18,7 @@ rotas_desafio3.geojson
 
 # Grafo binário serializado (dado derivado, contém coordenadas)
 paragominas.graph
+paragominas_gps.graph
 
 # Pares de teste (coordenadas exatas dos alvos)
 offline/test-pairs.json

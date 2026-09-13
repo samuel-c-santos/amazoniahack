@@ -231,6 +231,8 @@ TIER_MULTIPLIER = {
     "previsia": 1.2,          # traco detectado, sem data conhecida
     "confirmed_bridge": 1.5,  # ponte (snap) confirmada por infraestrutura do CAR
     "unconfirmed_bridge": 4.0,  # ponte por proximidade geometrica, sem 2a fonte
+    "gps_confirmed": 0.8,     # traco de GPS validado em campo (bonus): unica fonte
+                              # com confirmacao por travessia real - preferido ao OSM
     "risky_bridge": 20.0,     # ponte que cruza rio sem passagem conhecida - evitar
 }
 
@@ -242,6 +244,7 @@ TIER_CODES = {
     "previsia": 2,
     "confirmed_bridge": 3,
     "unconfirmed_bridge": 4,
+    "gps_confirmed": 5,
 }
 
 # Tolerancia de snap reduzida quando uma das pontas vem do IBGE - a camada
@@ -337,6 +340,10 @@ def serialize_graph(G, out_path):
     offset[n] = len(neighbor)
     m = len(neighbor)
 
+    gps_dates = sorted({
+        d["date"] for _, _, d in G.edges(data=True)
+        if d.get("source") == "gps_confirmed" and d.get("date")
+    })
     meta = {
         "crs": "EPSG:4326",
         "tier_codes": TIER_CODES,
@@ -345,6 +352,7 @@ def serialize_graph(G, out_path):
             "osm": {"fonte": "OpenStreetMap", "licenca": "ODbL", "data": None},
             "ibge": {"fonte": "SICAR/IBGE vw_sicar_rodovias", "licenca": "dados abertos SICAR", "data": "data_carga (ver atributo de origem)"},
             "previsia": {"fonte": "Imazon/Sentinel-2", "licenca": "consultar Imazon", "data": None},
+            "gps": {"fonte": "traco de GPS validado em campo", "licenca": "gerado pela equipe", "data": gps_dates or None},
         },
     }
     meta_bytes = json.dumps(meta, ensure_ascii=False).encode("utf-8")
@@ -370,6 +378,75 @@ def serialize_graph(G, out_path):
     ])
     Path(out_path).write_bytes(blob)
     print(f"  grafo serializado em {out_path}: {n} nos, {m} arestas (dirigido), {len(blob)/1e6:.1f} MB")
+
+
+def merge_gps_trace(G, trace_points, date, snap_tolerance_m=30):
+    """Marco bonus: a rede melhora com o uso. Adiciona um traco de GPS validado
+    em campo como arestas gps_confirmed (tier 5, multiplicador 0.8). O miolo do
+    traco vira novos nos ligados em sequencia; as duas pontas sao conectadas
+    (snap) aos nos ja existentes mais proximos, dentro de snap_tolerance_m, para
+    amarrar o traco a malha. date: data da validacao em campo."""
+    pre_nodes = list(G.nodes())
+    pre_coords = [to_utm.transform(lon, lat) for lon, lat in pre_nodes]
+    tree = cKDTree(pre_coords)
+
+    keys = [node_key(lon, lat) for lon, lat in trace_points]
+    utm_pts = [to_utm.transform(lon, lat) for lon, lat in trace_points]
+
+    added = 0
+    for i in range(len(trace_points) - 1):
+        a, b = trace_points[i], trace_points[i + 1]
+        G.add_edge(keys[i], keys[i + 1], weight=utm_dist(a, b),
+                   source="gps_confirmed", snapped=False, date=date)
+        added += 1
+
+    snapped = 0
+    for i in (0, len(trace_points) - 1):
+        dist, j = tree.query(utm_pts[i])
+        if dist <= snap_tolerance_m and pre_nodes[j] != keys[i]:
+            G.add_edge(keys[i], pre_nodes[j], weight=dist,
+                       source="gps_confirmed", snapped=False, date=date)
+            snapped += 1
+
+    print(f"  traco GPS ({date}): +{added} arestas de miolo, {snapped}/2 pontas conectadas a malha")
+    return added + snapped
+
+
+def demo_gps_bonus(G, pairs_path):
+    """Demonstracao do bonus: simula um agente percorrendo e validando a perna
+    final do par-01 (a distancia a pe que faltava), grava o traco como
+    gps_confirmed e mostra que a rota passa a chegar no destino. O traco e'
+    sintetico (linha reta), usado apenas para demonstrar o mecanismo, nao uma
+    estrada real."""
+    with open(pairs_path) as f:
+        rows = list(csv.DictReader(f))
+    row = rows[0]  # par-01
+
+    nodes = list(G.nodes())
+    tree = cKDTree([to_utm.transform(lon, lat) for lon, lat in nodes])
+    d_node, d_dist = nearest_node_in_graph(float(row["dest_lon"]), float(row["dest_lat"]), nodes, tree)
+    print(f"  [antes] destino a {d_dist:.0f} m do no mais proximo (perna a pe)")
+
+    start = d_node  # d_node ja e' a tupla (lon, lat), nao um indice
+    end = (float(row["dest_lon"]), float(row["dest_lat"]))
+    n_pts = 5
+    trace = []
+    for i in range(n_pts):
+        t = i / (n_pts - 1)
+        trace.append([start[0] + (end[0] - start[0]) * t,
+                      start[1] + (end[1] - start[1]) * t])
+
+    merge_gps_trace(G, trace, date="2026-09-13")
+    assign_costs(G)
+
+    nodes2 = list(G.nodes())
+    tree2 = cKDTree([to_utm.transform(lon, lat) for lon, lat in nodes2])
+    o_node, _ = nearest_node_in_graph(float(row["origin_lon"]), float(row["origin_lat"]), nodes2, tree2)
+    d2_node, d2_dist = nearest_node_in_graph(float(row["dest_lon"]), float(row["dest_lat"]), nodes2, tree2)
+    path = nx.shortest_path(G, o_node, d2_node, weight="cost")
+    dist = sum(G[u][v]["weight"] for u, v in zip(path, path[1:]))
+    n_gps = sum(1 for u, v in zip(path, path[1:]) if G[u][v].get("source") == "gps_confirmed")
+    print(f"  [depois] destino a {d2_dist:.0f} m do no | rota {dist/1000:.1f} km | {n_gps} arestas gps_confirmed usadas")
 
 
 def route_test_pairs(G, pairs_path, out_path):
@@ -582,3 +659,5 @@ if __name__ == "__main__":
     safe_G = strip_risky_bridges(Gt)
     route_test_pairs(safe_G, PAIRS_PATH, "rotas_desafio3.geojson")
     serialize_graph(safe_G, GRAPH_OUT_PATH)
+    demo_gps_bonus(safe_G, PAIRS_PATH)
+    serialize_graph(safe_G, Path("paragominas_gps.graph"))

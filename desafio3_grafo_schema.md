@@ -38,6 +38,7 @@ Tudo é little-endian. Layout sequencial do arquivo:
 | 2 | `previsia` | 1.2 |
 | 3 | `confirmed_bridge` | 1.5 |
 | 4 | `unconfirmed_bridge` | 4.0 |
+| 5 | `gps_confirmed` | 0.8 |
 
 (`risky_bridge` = 20.0 não aparece: essas arestas são removidas antes da
 serialização.)
@@ -47,12 +48,13 @@ serialização.)
 ```json
 {
   "crs": "EPSG:4326",
-  "tier_codes": { "osm": 0, "ibge": 1, "previsia": 2, "confirmed_bridge": 3, "unconfirmed_bridge": 4 },
-  "tier_multipliers": { "osm": 1.0, "ibge": 1.2, "previsia": 1.2, "confirmed_bridge": 1.5, "unconfirmed_bridge": 4.0, "risky_bridge": 20.0 },
+  "tier_codes": { "osm": 0, "ibge": 1, "previsia": 2, "confirmed_bridge": 3, "unconfirmed_bridge": 4, "gps_confirmed": 5 },
+  "tier_multipliers": { "osm": 1.0, "ibge": 1.2, "previsia": 1.2, "confirmed_bridge": 1.5, "unconfirmed_bridge": 4.0, "gps_confirmed": 0.8, "risky_bridge": 20.0 },
   "layers": {
     "osm":     { "fonte": "OpenStreetMap", "licenca": "ODbL", "data": null },
     "ibge":    { "fonte": "SICAR/IBGE vw_sicar_rodovias", "licenca": "dados abertos SICAR", "data": "data_carga (ver atributo de origem)" },
-    "previsia":{ "fonte": "Imazon/Sentinel-2", "licenca": "consultar Imazon", "data": null }
+    "previsia":{ "fonte": "Imazon/Sentinel-2", "licenca": "consultar Imazon", "data": null },
+    "gps":     { "fonte": "traço de GPS validado em campo", "licenca": "gerado pela equipe", "data": ["2026-09-13"] }
   }
 }
 ```

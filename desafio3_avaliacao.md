@@ -50,7 +50,7 @@ O pipeline pesado (grafo, snap, validação hidrográfica) é **preparação**, 
 - **Perfil de elevação/declividade.** Usamos a drenagem oficial só para o teste binário de cruzamento; não chegamos a baixar Copernicus DEM/SRTM para modelar declividade ou passabilidade sazonal.
 - **Os 5 pares sem rota** não foram investigados caso a caso — não sabemos se são isolamento real ou limite do método de snap.
 - **Visualização no aparelho (mapa + UI).** Há um demo funcional e sem dependências (`offline/index.html`, canvas): renderiza a malha colorida por tier e desenha a rota por clique, 100% offline. O que falta é o acabamento de produto — base map georreferenciado (MapLibre/MBTiles) e empacotamento como app Android.
-- **Marco bônus (mapa que melhora com o uso).** Não implementamos map-matching de traços de GPS; porém o grafo binário já é o substrato para isso — um traço validado em campo vira aresta de tier `gps_confirmed` (data + confiança alta) no arquivo, sem reescrever o roteador.
+- **Marco bônus (mapa que melhora com o uso).** Implementamos o mecanismo: um traço de GPS validado em campo vira aresta de tier `gps_confirmed` (código 5, multiplicador 0.8, data por traço no cabeçalho do binário) — **sem reescrever o roteador**, que lê os tiers do próprio cabeçalho. Demonstrado no par-01: a perna a pé de 1,9 km, ao ser percorrida e validada, vira estrada confirmada e a rota passa a chegar ao destino (perna final ≈ 0). O que ainda não existe é o map-matching automático de traços registrados.
 - **Idade real da malha PrevisIA.** O atributo não existe nos dados (só `cat` e `fonte`); declaramos essa ausência em vez de estimar uma data.
 
 ## Custo

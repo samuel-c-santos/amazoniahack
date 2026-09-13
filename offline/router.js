@@ -52,9 +52,12 @@ function loadGraph(filePath) {
   const tier = new Uint8Array(M);
   for (let i = 0; i < M; i++) { tier[i] = b[p++]; }
 
-  // multiplicador por codigo numerico de tier
-  const multByCode = new Float64Array(5);
-  const nameByCode = new Array(5);
+  // multiplicador por codigo numerico de tier (tamanho derivado do meta, para
+  // aceitar novos tiers — ex.: gps_confirmed — sem reescrever o roteador)
+  let maxCode = -1;
+  for (const code of Object.values(meta.tier_codes)) maxCode = Math.max(maxCode, code);
+  const multByCode = new Float64Array(maxCode + 1);
+  const nameByCode = new Array(maxCode + 1);
   for (const [name, code] of Object.entries(meta.tier_codes)) {
     multByCode[code] = meta.tier_multipliers[name];
     nameByCode[code] = name;
@@ -209,10 +212,10 @@ function route(g, src, dst) {
 // (gitignored). A biblioteca (loadGraph/route/...) nao carrega nenhuma
 // coordenada e pode ser usada no browser.
 // ---------------------------------------------------------------------------
-function main(pairsPath) {
+function main(pairsPath, graphPath) {
   const pairs = JSON.parse(fs.readFileSync(pairsPath, 'utf-8'));
   const t0 = Date.now();
-  const g = loadGraph(GRAPH_PATH);
+  const g = loadGraph(graphPath || GRAPH_PATH);
   console.log(
     `grafo carregado: ${g.N} nos, ${g.M} arestas (dirigido) em ${Date.now() - t0} ms`
   );
@@ -244,10 +247,10 @@ function main(pairsPath) {
 
 if (require.main === module) {
   if (!process.argv[2]) {
-    console.error('uso: node offline/router.js <pairs.json>');
+    console.error('uso: node offline/router.js <pairs.json> [grafo.graph]');
     process.exit(1);
   }
-  main(process.argv[2]);
+  main(process.argv[2], process.argv[3]);
 }
 
 if (typeof module !== 'undefined' && module.exports) {

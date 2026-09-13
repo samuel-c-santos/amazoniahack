@@ -146,6 +146,7 @@ linguagem ou visão em nenhuma etapa.
   do método de snap).
 - Sem modelagem de declividade / passabilidade sazonal (Copernicus DEM/SRTM).
 - Data da malha PrevisIA desconhecida — declarada como `null`, não estimada.
-- Marco bônus ("rede que melhora com o uso") arquitetado, não implementado: um traço
-  de GPS validado em campo viraria uma aresta `gps_confirmed` (data + confiança alta)
-  no grafo, sem reescrever o roteador.
+- Marco bônus ("rede que melhora com o uso") implementado no mecanismo: um traço
+  de GPS validado em campo vira uma aresta `gps_confirmed` (tier 5, multiplicador
+  0.8, data no cabeçalho do binário) sem reescrever o roteador. Falta o
+  map-matching automático dos traços.

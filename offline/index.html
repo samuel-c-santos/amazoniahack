@@ -72,7 +72,9 @@ async function loadGraph(url) {
   const tier = new Uint8Array(M);
   for (let i = 0; i < M; i++) { tier[i] = b[p++]; }
 
-  const multByCode = new Float64Array(5);
+  let maxCode = -1;
+  for (const code of Object.values(meta.tier_codes)) maxCode = Math.max(maxCode, code);
+  const multByCode = new Float64Array(maxCode + 1);
   const nameByCode = [];
   for (const [name, code] of Object.entries(meta.tier_codes)) {
     multByCode[code] = meta.tier_multipliers[name];
@@ -211,6 +213,7 @@ const TIER_STYLE = {
   2: { name: 'previsia (traços)',   color: '#d98c4a', w: 0.6, a: 0.30 },
   3: { name: 'ponte confirmada',    color: '#2ecc71', w: 1.6, a: 0.95 },
   4: { name: 'ponte não confirmada',color: '#e74c3c', w: 1.2, a: 0.8 },
+  5: { name: 'gps confirmado (campo)', color: '#2fa8a0', w: 1.6, a: 0.95 },
 };
 
 const canvas = document.getElementById('map');
