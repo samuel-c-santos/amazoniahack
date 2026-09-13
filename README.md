@@ -44,8 +44,8 @@ que temos. Análise completa em [`desafio3_avaliacao.md`](desafio3_avaliacao.md)
 ## Arquitetura
 
 ```mermaid
-flowchart TB
-    %% Paleta de alta legibilidade (UX limpo, foco em contraste para o GitHub)
+flowchart LR
+    %% Estilos limpos e acadêmicos
     classDef source fill:#f8fafc,stroke:#94a3b8,stroke-width:1px,color:#0f172a,rx:4px
     classDef process fill:#ffffff,stroke:#64748b,stroke-width:1.5px,color:#0f172a,rx:4px
     classDef artifact fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:6px
@@ -53,44 +53,34 @@ flowchart TB
 
     subgraph BUILD ["BUILD (Online — 1x por município)"]
         direction TB
+        B1("OSM + IBGE/SICAR + PrevisIA"):::source
+        B2["Grafo unificado<br/>(mesmo espaço de nós)"]:::process
+        B3["Snap só em pontas (grau 1)"]:::process
+        B4["Validação hidrográfica"]:::process
+        B5["Tier + custo por aresta"]:::process
         
-        subgraph FONTES [" "]
-            direction LR
-            D1("OSM"):::source
-            D2("IBGE / SICAR"):::source
-            D3("PrevisIA"):::source
-        end
-
-        P1["Grafo unificado<br/>(mesmo espaço de nós)"]:::process
-        P2["Snap só em pontas<br/>(grau 1)"]:::process
-        P3["Validação hidrográfica"]:::process
-        P4["Cálculo de Tier e Custo"]:::process
-
-        FONTES --> P1
-        P1 --> P2
-        P2 --> P3
-        P3 --> P4
+        B1 --> B2 --> B3 --> B4 --> B5
     end
 
-    A[("paragominas.graph<br/>(CSR ~29 MB)")]:::artifact
+    DB[("paragominas.graph<br/>(CSR ~29 MB)")]:::artifact
 
     subgraph QUERY ["QUERY (Offline — no aparelho)"]
         direction TB
-        Q1["Snap Origem/Destino<br/>(índice UTM)"]:::query
-        Q2["Algoritmo de Dijkstra<br/>(distância × confiança)"]:::query
-        Q3(["Rota colorida por tier<br/>+ Relatório"]):::query
-
-        Q1 --> Q2
-        Q2 --> Q3
+        Q1["Fetch / Mmap"]:::query
+        Q2["Snap Origem/Destino (UTM)"]:::query
+        Q3["Algoritmo de Dijkstra"]:::query
+        Q4["Rota colorida por tier"]:::query
+        
+        Q1 --> Q2 --> Q3 --> Q4
     end
 
-    P4 -->|Serialização| A
-    A -->|Fetch / Mmap| Q1
+    %% O PULO DO GATO: Ligar as bordas dos quadros em vez dos nós de dentro.
+    %% Isso trava o Mermaid e obriga ele a fazer as 3 colunas que você desenhou no ASCII.
+    BUILD -->|Serialização| DB
+    DB -->|Consulta| QUERY
 
-    %% Estilos das caixas de contenção
     style BUILD fill:none,stroke:#cbd5e1,stroke-width:2px,stroke-dasharray: 5 5
     style QUERY fill:none,stroke:#cbd5e1,stroke-width:2px,stroke-dasharray: 5 5
-    style FONTES fill:none,stroke:none
 ```
 
 O trabalho pesado é **preparação**, feita uma vez; o que roda em campo é um grafo
