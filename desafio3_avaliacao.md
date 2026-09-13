@@ -45,12 +45,23 @@ O teto de 9–10/16 relatado no README do desafio (só OSM + PrevisIA) subiu par
 
 O pipeline pesado (grafo, snap, validação hidrográfica) é **preparação**, feita uma única vez; o que roda no aparelho é um **grafo pré-computado** em CSR binário (`paragominas.graph`, 29,3 MB para 763.856 nós / 1.559.340 arestas dirigidas; schema em `desafio3_grafo_schema.md`). Um roteador embarcado (`offline/router.js`, sem dependências) lê o binário, indexa os nós em UTM e executa Dijkstra **sem rede**: 101 ms para carregar o grafo, 222 ms para o índice espacial, e a rota em dezenas de ms. O custo por aresta é `distância × multiplicador de confiança` — o mesmo critério do pipeline Python — e a paridade é **exata**: os 16 pares roteados no navegador reproduzem ponto a ponto os 11/16 do Python (par-01: 49,1 km, perna de destino 1.937 m, osm 61,9% / ibge 38,0% / ponte não confirmada 0,2%). A data dos dados por camada vai no cabeçalho do binário (PrevisIA = `null`, declarando a ausência em vez de estimar), atendendo "rotas com confiança e data" no próprio arquivo. Um demo em navegador (`offline/index.html`) prova a entrega: carrega o binário, renderiza a malha por tier num canvas e calcula a rota por dois cliques, sem nenhuma chamada externa.
 
+## Marco bônus — rede que melhora com o uso
+
+Implementamos o mecanismo do marco bônus. Um traço de GPS validado em campo
+(`merge_gps_trace` em `desafio3_grafo_base.py`) vira arestas de tier `gps_confirmed`
+(código 5, multiplicador 0,8 — preferido ao OSM, por ser a única fonte confirmada por
+travessia real). A data da validação vai no cabeçalho do binário, e o roteador **não
+precisa mudar**: ele lê códigos e multiplicadores do próprio cabeçalho. Demonstrado no
+par-01 — a perna a pé de 1,9 km, uma vez percorrida e validada, vira estrada confirmada
+e a rota passa a chegar ao destino (perna final ≈ 0; rota de 51,0 km com 3,8% em
+`gps_confirmed`). O que resta é o map-matching automático de traços brutos.
+
 ## O que ficou de fora
 
 - **Perfil de elevação/declividade.** Usamos a drenagem oficial só para o teste binário de cruzamento; não chegamos a baixar Copernicus DEM/SRTM para modelar declividade ou passabilidade sazonal.
 - **Os 5 pares sem rota** não foram investigados caso a caso — não sabemos se são isolamento real ou limite do método de snap.
 - **Visualização no aparelho (mapa + UI).** Há um demo funcional e sem dependências (`offline/index.html`, canvas): renderiza a malha colorida por tier e desenha a rota por clique, 100% offline. O que falta é o acabamento de produto — base map georreferenciado (MapLibre/MBTiles) e empacotamento como app Android.
-- **Marco bônus (mapa que melhora com o uso).** Implementamos o mecanismo: um traço de GPS validado em campo vira aresta de tier `gps_confirmed` (código 5, multiplicador 0.8, data por traço no cabeçalho do binário) — **sem reescrever o roteador**, que lê os tiers do próprio cabeçalho. Demonstrado no par-01: a perna a pé de 1,9 km, ao ser percorrida e validada, vira estrada confirmada e a rota passa a chegar ao destino (perna final ≈ 0). O que ainda não existe é o map-matching automático de traços registrados.
+- **Map-matching automático de traços de GPS.** O mecanismo de merge `gps_confirmed` já existe; falta automatizar o encaixe de um traço bruto à malha.
 - **Idade real da malha PrevisIA.** O atributo não existe nos dados (só `cat` e `fonte`); declaramos essa ausência em vez de estimar uma data.
 
 ## Custo

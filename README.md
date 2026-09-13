@@ -41,6 +41,13 @@ confirmação independente por infraestrutura declarada no CAR. Essa lacuna entr
 "geometricamente plausível" e "confirmado por segunda fonte" é o número mais honesto
 que temos. Análise completa em [`desafio3_avaliacao.md`](desafio3_avaliacao.md).
 
+## Marco bônus (rede que melhora com o uso)
+
+Um traço de GPS validado em campo vira arestas `gps_confirmed` (tier 5, multiplicador
+0,8, data no cabeçalho do binário) **sem reescrever o roteador** — ele lê os tiers do
+próprio cabeçalho. Demonstrado no par-01: a perna a pé de 1,9 km, validada, passa a
+chegar ao destino. Falta o map-matching automático dos traços brutos.
+
 ## Arquitetura
 
 ```mermaid
@@ -95,6 +102,7 @@ estático de ~29 MB e um Dijkstra que resolve uma rota em dezenas de ms.
 | `offline/router.js` | Roteador offline (biblioteca JS, sem dependências) |
 | `offline/index.html` | Demo no navegador: malha colorida por tier + rota por clique |
 | `desafio3_avaliacao.md` | Avaliação técnica e de confiabilidade |
+| `desafio3_changelog.md` | Correções realizadas e justificativas |
 | `requirements.txt` | Dependências do pipeline (Python 3.11) |
 
 ## Como rodar
@@ -146,7 +154,5 @@ linguagem ou visão em nenhuma etapa.
   do método de snap).
 - Sem modelagem de declividade / passabilidade sazonal (Copernicus DEM/SRTM).
 - Data da malha PrevisIA desconhecida — declarada como `null`, não estimada.
-- Marco bônus ("rede que melhora com o uso") implementado no mecanismo: um traço
-  de GPS validado em campo vira uma aresta `gps_confirmed` (tier 5, multiplicador
-  0.8, data no cabeçalho do binário) sem reescrever o roteador. Falta o
-  map-matching automático dos traços.
+- Map-matching automático de traços de GPS ainda não implementado (o merge manual
+  `gps_confirmed` já existe).
