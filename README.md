@@ -43,16 +43,33 @@ que temos. Análise completa em [`desafio3_avaliacao.md`](desafio3_avaliacao.md)
 
 ## Arquitetura
 
-```
-        BUILD (online, 1x por município)               QUERY (offline, no aparelho)
-┌───────────────────────────────────────┐       ┌──────────────────────────────────┐
-│ OSM + IBGE/SICAR + PrevisIA           │       │ paragominas.graph (CSR, ~29 MB)  │
-│   → grafo unificado                   │       │   → carregar (fetch / mmap)      │
-│   → snap só em pontas (grau 1)        │─────▶ │   → snap origem/destino (UTM)    │
-│   → validação hidrográfica            │       │   → Dijkstra                     │
-│   → tier + custo por aresta           │       │   → rota colorida por tier       │
-│   → serialização → paragominas.graph  │       │                                  │
-└───────────────────────────────────────┘       └──────────────────────────────────┘
+```mermaid
+flowchart LR
+    subgraph build["BUILD — online, 1x por município"]
+        direction TB
+        A["Fontes abertas<br/>OSM · IBGE/SICAR · PrevisIA"]:::input
+        B["Grafo unificado<br/>mesmo espaço de nós"]:::process
+        C["Snap só em pontas<br/>grau 1, tolerância geométrica"]:::process
+        D["Validação hidrográfica<br/>exclui travessias sem ponte"]:::process
+        E["Tier + custo<br/>confiança por aresta"]:::process
+        F["Serialização CSR<br/>paragominas.graph"]:::output
+        A --> B --> C --> D --> E --> F
+    end
+
+    subgraph query["QUERY — offline, no aparelho"]
+        direction TB
+        G["paragominas.graph<br/>CSR ~29 MB"]:::output
+        H["Snap origem/destino<br/>índice UTM"]:::process
+        I["Dijkstra<br/>distância × confiança"]:::process
+        J["Rota por tier<br/>colorida + relatório"]:::output
+        G --> H --> I --> J
+    end
+
+    F --> G
+
+    classDef input fill:#5b6474,stroke:#434c59,color:#ffffff;
+    classDef process fill:#1e3a5f,stroke:#14273f,color:#ffffff;
+    classDef output fill:#4a5d3a,stroke:#35432a,color:#ffffff;
 ```
 
 O trabalho pesado é **preparação**, feita uma vez; o que roda em campo é um grafo
