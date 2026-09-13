@@ -43,6 +43,12 @@ confirmação independente por infraestrutura declarada no CAR. Essa lacuna entr
 "geometricamente plausível" e "confirmado por segunda fonte" é o número mais honesto
 que temos. Análise completa em [`desafio3_avaliacao.md`](desafio3_avaliacao.md).
 
+
+
+https://github.com/user-attachments/assets/17b13d0e-a111-425a-9c4a-d997b1535436
+
+
+
 ## Marco bônus (rede que melhora com o uso)
 
 Um traço de GPS validado em campo vira arestas `gps_confirmed` (tier 5, multiplicador
