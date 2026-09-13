@@ -45,31 +45,49 @@ que temos. Análise completa em [`desafio3_avaliacao.md`](desafio3_avaliacao.md)
 
 ```mermaid
 flowchart LR
-    subgraph build["BUILD — online, 1x por município"]
+    %% Paleta de alta legibilidade (UX limpo, foco em contraste para o GitHub)
+    classDef source fill:#f8fafc,stroke:#94a3b8,stroke-width:1px,color:#0f172a,rx:4px
+    classDef process fill:#ffffff,stroke:#64748b,stroke-width:1.5px,color:#0f172a,rx:4px
+    classDef artifact fill:#0f172a,stroke:#0f172a,stroke-width:2px,color:#ffffff,font-weight:bold,rx:6px
+    classDef query fill:#f0fdf4,stroke:#22c55e,stroke-width:1.5px,color:#14532d,rx:4px
+
+    subgraph BUILD ["BUILD (Online — 1x por município)"]
         direction TB
-        A["Fontes abertas<br/>OSM · IBGE/SICAR · PrevisIA"]:::input
-        B["Grafo unificado<br/>mesmo espaço de nós"]:::process
-        C["Snap só em pontas<br/>grau 1, tolerância geométrica"]:::process
-        D["Validação hidrográfica<br/>exclui travessias sem ponte"]:::process
-        E["Tier + custo<br/>confiança por aresta"]:::process
-        F["Serialização CSR<br/>paragominas.graph"]:::output
-        A --> B --> C --> D --> E --> F
+        
+        subgraph FONTES [" "]
+            direction LR
+            D1("OSM"):::source
+            D2("IBGE / SICAR"):::source
+            D3("PrevisIA"):::source
+        end
+
+        P1["Grafo unificado<br/>(mesmo espaço de nós)"]:::process
+        P2["Snap só em pontas<br/>(grau 1)"]:::process
+        P3["Validação hidrográfica"]:::process
+        P4["Cálculo de Tier e Custo"]:::process
+
+        FONTES --> P1
+        P1 --> P2 --> P3 --> P4
     end
 
-    subgraph query["QUERY — offline, no aparelho"]
+    A[("paragominas.graph<br/>(CSR ~29 MB)")]:::artifact
+
+    subgraph QUERY ["QUERY (Offline — no aparelho)"]
         direction TB
-        G["paragominas.graph<br/>CSR ~29 MB"]:::output
-        H["Snap origem/destino<br/>índice UTM"]:::process
-        I["Dijkstra<br/>distância × confiança"]:::process
-        J["Rota por tier<br/>colorida + relatório"]:::output
-        G --> H --> I --> J
+        Q1["Snap Origem/Destino<br/>(índice UTM)"]:::query
+        Q2["Algoritmo de Dijkstra<br/>(distância × confiança)"]:::query
+        Q3(["Rota colorida por tier<br/>+ Relatório"]):::query
+
+        Q1 --> Q2 --> Q3
     end
 
-    F --> G
+    P4 -->|Serialização| A
+    A -->|Fetch / Mmap| Q1
 
-    classDef input fill:#5b6474,stroke:#434c59,color:#ffffff;
-    classDef process fill:#1e3a5f,stroke:#14273f,color:#ffffff;
-    classDef output fill:#4a5d3a,stroke:#35432a,color:#ffffff;
+    %% Estilos das caixas de contenção (borda tracejada elegante, sem fundo pesado)
+    style BUILD fill:none,stroke:#cbd5e1,stroke-width:2px,stroke-dasharray: 5 5
+    style QUERY fill:none,stroke:#cbd5e1,stroke-width:2px,stroke-dasharray: 5 5
+    style FONTES fill:none,stroke:none
 ```
 
 O trabalho pesado é **preparação**, feita uma vez; o que roda em campo é um grafo
